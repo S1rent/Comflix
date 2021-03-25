@@ -6,16 +6,29 @@
 //
 
 import Foundation
+import Combine
 
-class ProfileRepository: ProfileRepositoryProtocol {
+final class ProfileRepository {
+
+    typealias ProfileInstance = (ProfileDataSource) -> ProfileRepository
     
-    private let dataSource: ProfileDataSourceProtocol
+    fileprivate let dataSource: ProfileDataSourceProtocol
     
-    init(dataSource: ProfileDataSourceProtocol) {
+    private init(dataSource: ProfileDataSourceProtocol) {
         self.dataSource = dataSource
     }
-    
-    func getProfileData() -> ProfileEntity {
-        return self.dataSource.getProfileData()
+
+    public static let shared: ProfileInstance = { repository in
+        return ProfileRepository(dataSource: repository)
+    }
+}
+
+extension ProfileRepository: ProfileRepositoryProtocol {
+    func getProfileData() -> AnyPublisher<ProfileModel, Error> {
+        return self.dataSource
+                .getProfileData()
+                .map {
+                ProfileMapper.mapCategoryEntitiesToDomains(input: $0)
+                }.eraseToAnyPublisher()
     }
 }

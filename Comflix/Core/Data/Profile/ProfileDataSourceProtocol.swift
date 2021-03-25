@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import RealmSwift
+import Combine
 
 protocol ProfileDataSourceProtocol {
-    func getProfileData() -> ProfileEntity
+    func getProfileData() -> AnyPublisher<ProfileEntity, Error>
 }

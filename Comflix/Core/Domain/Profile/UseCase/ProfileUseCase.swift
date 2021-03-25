@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import Combine
 
 protocol ProfileUseCase {
-    func getProfileData() -> ProfileEntity
+    func getProfileData() -> AnyPublisher<ProfileModel, Error>
 }

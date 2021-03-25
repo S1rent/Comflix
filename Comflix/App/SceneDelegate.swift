@@ -14,7 +14,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
-        let contentView = ContentView()
+        let useCase = ProfileInjection.init().provideUseCase()
+
+        let profilePresenter = ProfilePresenter(useCase: useCase)
+        
+        let contentView = ContentView().environmentObject(profilePresenter)
 
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)

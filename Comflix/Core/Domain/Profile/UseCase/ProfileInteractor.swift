@@ -6,16 +6,17 @@
 //
 
 import Foundation
+import Combine
 
 class ProfileInteractor: ProfileUseCase {
     
     private let repository: ProfileRepositoryProtocol
     
-    init(repository: ProfileRepositoryProtocol) {
+    required init(repository: ProfileRepositoryProtocol) {
         self.repository = repository
     }
     
-    func getProfileData() -> ProfileEntity {
+    func getProfileData() -> AnyPublisher<ProfileModel, Error> {
         return self.repository.getProfileData()
     }
 }

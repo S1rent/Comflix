@@ -8,15 +8,13 @@
 import Foundation
 
 final class ProfileInjection: NSObject {
-    private func provideDataSource() -> ProfileDataSourceProtocol {
-        return ProfileDataSource()
-    }
     
     private func provideRepository() -> ProfileRepositoryProtocol {
-        return ProfileRepository(dataSource: provideDataSource())
+        let dataSource: ProfileDataSource = ProfileDataSource.shared
+        return ProfileRepository.shared(dataSource)
     }
     
-    private func provideUseCase() -> ProfileUseCase {
+    func provideUseCase() -> ProfileUseCase {
         return ProfileInteractor(repository: provideRepository())
     }
 }

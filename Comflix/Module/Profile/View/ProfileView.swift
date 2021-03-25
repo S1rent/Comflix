@@ -10,9 +10,7 @@ import SDWebImageSwiftUI
 
 struct ProfileView: View {
     
-    let profileURLs = URL(string: "")
-    let profileEmails = "philip.prayitno@gmail.com"
-    let profileNames = "Philip Indra Prayitno"
+    @ObservedObject var presenter: ProfilePresenter
     
     var body: some View {
         ScrollView {
@@ -22,20 +20,18 @@ struct ProfileView: View {
         }.padding(
             [.leading, .trailing],
             16
-        )
-    }
-}
-
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView()
+        ).onAppear {
+            if self.presenter.profileModel == nil {
+                self.presenter.getProfileData()
+            }
+        }
     }
 }
 
 extension ProfileView {
     var profileImage: some View {
         WebImage(
-            url: profileURLs
+            url: URL(string: self.presenter.profileModel?.userPhotoURL ?? "")
         ).resizable()
         .indicator(.activity)
         .transition(.fade(duration: 0.5))
@@ -51,7 +47,7 @@ extension ProfileView {
     
     var profileName: some View {
         Text(
-            profileNames
+            self.presenter.profileModel?.userName ?? "-"
         ).font(
             .title
         )
@@ -61,7 +57,7 @@ extension ProfileView {
     
     var profileEmail: some View {
         Text(
-            profileEmails
+            self.presenter.profileModel?.userEmail ?? "-"
         ).font(
             .body
         ).lineLimit(3)

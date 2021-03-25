@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ProfilePresenterProtocol {
-    func getProfileData() -> ProfileEntity
+    func getProfileData()
 }

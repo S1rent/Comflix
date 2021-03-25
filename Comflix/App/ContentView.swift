@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var profilePresenter: ProfilePresenter
+    
     var body: some View {
         TabView {
-            ProfileView()
+            ProfileView(presenter: profilePresenter)
                 .tabItem {
                     VStack {
                         Image(systemName: "person.fill")

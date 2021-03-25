@@ -25,6 +25,8 @@
 		A1D71A78260C967D00487486 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A77260C967D00487486 /* ProfileInteractor.swift */; };
 		A1D71A7C260C971600487486 /* ProfilePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A7B260C971600487486 /* ProfilePresenterProtocol.swift */; };
 		A1D71A80260C971D00487486 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A7F260C971D00487486 /* ProfilePresenter.swift */; };
+		A1D71AA0260C9EC600487486 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A9F260C9EC600487486 /* ProfileModel.swift */; };
+		A1D71AA5260CA57100487486 /* ProfileMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71AA4260CA57100487486 /* ProfileMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		A1D71A77260C967D00487486 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		A1D71A7B260C971600487486 /* ProfilePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenterProtocol.swift; sourceTree = "<group>"; };
 		A1D71A7F260C971D00487486 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		A1D71A9F260C9EC600487486 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		A1D71AA4260CA57100487486 /* ProfileMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMapper.swift; sourceTree = "<group>"; };
 		A75836759C6A9AC793AA04EE /* Pods-Comflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comflix.release.xcconfig"; path = "Target Support Files/Pods-Comflix/Pods-Comflix.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,6 +182,7 @@
 		A1D71A57260C8EE000487486 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A1D71AA3260CA55F00487486 /* Mapper */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 		A1D71A5D260C92C000487486 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				A1D71A9C260C9E9100487486 /* Entity */,
 				A1D71A65260C933600487486 /* ProfileDataSource.swift */,
 				A1D71A62260C930400487486 /* ProfileDataSourceProtocol.swift */,
 				A1D71A6C260C952300487486 /* ProfileRepository.swift */,
@@ -220,9 +226,8 @@
 		A1D71A68260C935800487486 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				A1D71A69260C936B00487486 /* ProfileEntity.swift */,
-				A1D71A73260C962F00487486 /* ProfileUseCase.swift */,
-				A1D71A77260C967D00487486 /* ProfileInteractor.swift */,
+				A1D71A9D260C9EA400487486 /* Model */,
+				A1D71A9E260C9EA800487486 /* UseCase */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -242,6 +247,39 @@
 				A1D71A7B260C971600487486 /* ProfilePresenterProtocol.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A1D71A9C260C9E9100487486 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71A69260C936B00487486 /* ProfileEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		A1D71A9D260C9EA400487486 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71A9F260C9EC600487486 /* ProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A1D71A9E260C9EA800487486 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71A73260C962F00487486 /* ProfileUseCase.swift */,
+				A1D71A77260C967D00487486 /* ProfileInteractor.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		A1D71AA3260CA55F00487486 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71AA4260CA57100487486 /* ProfileMapper.swift */,
+			);
+			path = Mapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,9 +414,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1D71AA0260C9EC600487486 /* ProfileModel.swift in Sources */,
 				A1D71A7C260C971600487486 /* ProfilePresenterProtocol.swift in Sources */,
 				A1D71A54260C89AF00487486 /* ProfileView.swift in Sources */,
 				A1D71A5F260C92CD00487486 /* ProfileRepositoryProtocol.swift in Sources */,
+				A1D71AA5260CA57100487486 /* ProfileMapper.swift in Sources */,
 				A1D71A63260C930400487486 /* ProfileDataSourceProtocol.swift in Sources */,
 				A1D71A66260C933600487486 /* ProfileDataSource.swift in Sources */,
 				A1D71A6A260C936B00487486 /* ProfileEntity.swift in Sources */,
