@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C345DE2A1563AB0B687C757 /* Pods_Comflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E06D7C0881A7BE793F86CA /* Pods_Comflix.framework */; };
+		A1D71A0C260C800500487486 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A0B260C800500487486 /* AppDelegate.swift */; };
+		A1D71A0E260C800500487486 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A0D260C800500487486 /* SceneDelegate.swift */; };
+		A1D71A10260C800500487486 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A0F260C800500487486 /* ContentView.swift */; };
+		A1D71A15260C800600487486 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1D71A14260C800600487486 /* Assets.xcassets */; };
+		A1D71A18260C800600487486 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1D71A17260C800600487486 /* Preview Assets.xcassets */; };
+		A1D71A1B260C800600487486 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D71A19260C800600487486 /* LaunchScreen.storyboard */; };
+		A1D71A54260C89AF00487486 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A53260C89AF00487486 /* ProfileView.swift */; };
+		A1D71A5F260C92CD00487486 /* ProfileRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A5E260C92CD00487486 /* ProfileRepositoryProtocol.swift */; };
+		A1D71A63260C930400487486 /* ProfileDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A62260C930400487486 /* ProfileDataSourceProtocol.swift */; };
+		A1D71A66260C933600487486 /* ProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A65260C933600487486 /* ProfileDataSource.swift */; };
+		A1D71A6A260C936B00487486 /* ProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A69260C936B00487486 /* ProfileEntity.swift */; };
+		A1D71A6D260C952300487486 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A6C260C952300487486 /* ProfileRepository.swift */; };
+		A1D71A71260C95C300487486 /* ProfileInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A70260C95C300487486 /* ProfileInjection.swift */; };
+		A1D71A74260C962F00487486 /* ProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A73260C962F00487486 /* ProfileUseCase.swift */; };
+		A1D71A78260C967D00487486 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A77260C967D00487486 /* ProfileInteractor.swift */; };
+		A1D71A7C260C971600487486 /* ProfilePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A7B260C971600487486 /* ProfilePresenterProtocol.swift */; };
+		A1D71A80260C971D00487486 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A7F260C971D00487486 /* ProfilePresenter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6AA420F7E1805FEA1B9ACCE9 /* Pods-Comflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comflix.debug.xcconfig"; path = "Target Support Files/Pods-Comflix/Pods-Comflix.debug.xcconfig"; sourceTree = "<group>"; };
+		84E06D7C0881A7BE793F86CA /* Pods_Comflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1D71A08260C800500487486 /* Comflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Comflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1D71A0B260C800500487486 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A1D71A0D260C800500487486 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A1D71A0F260C800500487486 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A1D71A14260C800600487486 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1D71A17260C800600487486 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A1D71A1A260C800600487486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A1D71A1C260C800600487486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1D71A53260C89AF00487486 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		A1D71A5E260C92CD00487486 /* ProfileRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepositoryProtocol.swift; sourceTree = "<group>"; };
+		A1D71A62260C930400487486 /* ProfileDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataSourceProtocol.swift; sourceTree = "<group>"; };
+		A1D71A65260C933600487486 /* ProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataSource.swift; sourceTree = "<group>"; };
+		A1D71A69260C936B00487486 /* ProfileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEntity.swift; sourceTree = "<group>"; };
+		A1D71A6C260C952300487486 /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
+		A1D71A70260C95C300487486 /* ProfileInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInjection.swift; sourceTree = "<group>"; };
+		A1D71A73260C962F00487486 /* ProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCase.swift; sourceTree = "<group>"; };
+		A1D71A77260C967D00487486 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		A1D71A7B260C971600487486 /* ProfilePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenterProtocol.swift; sourceTree = "<group>"; };
+		A1D71A7F260C971D00487486 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		A75836759C6A9AC793AA04EE /* Pods-Comflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comflix.release.xcconfig"; path = "Target Support Files/Pods-Comflix/Pods-Comflix.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1D71A05260C800500487486 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C345DE2A1563AB0B687C757 /* Pods_Comflix.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4645E275BDA799746B335AED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84E06D7C0881A7BE793F86CA /* Pods_Comflix.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		62B64FCB0BFE79E073AD2A2A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6AA420F7E1805FEA1B9ACCE9 /* Pods-Comflix.debug.xcconfig */,
+				A75836759C6A9AC793AA04EE /* Pods-Comflix.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A1D719FF260C800500487486 = {
+			isa = PBXGroup;
+			children = (
+				A1D71A0A260C800500487486 /* Comflix */,
+				A1D71A09260C800500487486 /* Products */,
+				62B64FCB0BFE79E073AD2A2A /* Pods */,
+				4645E275BDA799746B335AED /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A1D71A09260C800500487486 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71A08260C800500487486 /* Comflix.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1D71A0A260C800500487486 /* Comflix */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71A4B260C85C100487486 /* App */,
+				A1D71A4C260C85C500487486 /* Core */,
+				A1D71A4D260C85C800487486 /* Module */,
+				A1D71A16260C800600487486 /* Preview Content */,
+				A1D71A4E260C85DD00487486 /* Supporting Files */,
+			);
+			path = Comflix;
+			sourceTree = "<group>";
+		};
+		A1D71A16260C800600487486 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71A17260C800600487486 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A1D71A4B260C85C100487486 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71A0B260C800500487486 /* AppDelegate.swift */,
+				A1D71A0F260C800500487486 /* ContentView.swift */,
+				A1D71A0D260C800500487486 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A1D71A4C260C85C500487486 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71A5A260C8EED00487486 /* Data */,
+				A1D71A59260C8EE900487486 /* DI */,
+				A1D71A58260C8EE300487486 /* Domain */,
+				A1D71A57260C8EE000487486 /* Utils */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A1D71A4D260C85C800487486 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71A51260C895C00487486 /* Profile */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		A1D71A4E260C85DD00487486 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71A14260C800600487486 /* Assets.xcassets */,
+				A1D71A1C260C800600487486 /* Info.plist */,
+				A1D71A19260C800600487486 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1D71A51260C895C00487486 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71A7A260C96F600487486 /* Presenter */,
+				A1D71A52260C897600487486 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A1D71A52260C897600487486 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71A53260C89AF00487486 /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1D71A57260C8EE000487486 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A1D71A58260C8EE300487486 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71A68260C935800487486 /* Profile */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A1D71A59260C8EE900487486 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71A6F260C95BA00487486 /* Profile */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		A1D71A5A260C8EED00487486 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71A5D260C92C000487486 /* Profile */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A1D71A5D260C92C000487486 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71A65260C933600487486 /* ProfileDataSource.swift */,
+				A1D71A62260C930400487486 /* ProfileDataSourceProtocol.swift */,
+				A1D71A6C260C952300487486 /* ProfileRepository.swift */,
+				A1D71A5E260C92CD00487486 /* ProfileRepositoryProtocol.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A1D71A68260C935800487486 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71A69260C936B00487486 /* ProfileEntity.swift */,
+				A1D71A73260C962F00487486 /* ProfileUseCase.swift */,
+				A1D71A77260C967D00487486 /* ProfileInteractor.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A1D71A6F260C95BA00487486 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71A70260C95C300487486 /* ProfileInjection.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A1D71A7A260C96F600487486 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71A7F260C971D00487486 /* ProfilePresenter.swift */,
+				A1D71A7B260C971600487486 /* ProfilePresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1D71A07260C800500487486 /* Comflix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1D71A1F260C800600487486 /* Build configuration list for PBXNativeTarget "Comflix" */;
+			buildPhases = (
+				1F8E09F076E2A0F24022C4B8 /* [CP] Check Pods Manifest.lock */,
+				A1D71A48260C853700487486 /* ShellScript */,
+				A1D71A04260C800500487486 /* Sources */,
+				A1D71A05260C800500487486 /* Frameworks */,
+				A1D71A06260C800500487486 /* Resources */,
+				7A5CCABB780F36DBD8C19DB1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Comflix;
+			productName = Comflix;
+			productReference = A1D71A08260C800500487486 /* Comflix.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1D71A00260C800500487486 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					A1D71A07260C800500487486 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+				};
+			};
+			buildConfigurationList = A1D71A03260C800500487486 /* Build configuration list for PBXProject "Comflix" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A1D719FF260C800500487486;
+			productRefGroup = A1D71A09260C800500487486 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1D71A07260C800500487486 /* Comflix */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1D71A06260C800500487486 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D71A1B260C800600487486 /* LaunchScreen.storyboard in Resources */,
+				A1D71A18260C800600487486 /* Preview Assets.xcassets in Resources */,
+				A1D71A15260C800600487486 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F8E09F076E2A0F24022C4B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Comflix-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A5CCABB780F36DBD8C19DB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Comflix/Pods-Comflix-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Comflix/Pods-Comflix-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Comflix/Pods-Comflix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1D71A48260C853700487486 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1D71A04260C800500487486 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D71A7C260C971600487486 /* ProfilePresenterProtocol.swift in Sources */,
+				A1D71A54260C89AF00487486 /* ProfileView.swift in Sources */,
+				A1D71A5F260C92CD00487486 /* ProfileRepositoryProtocol.swift in Sources */,
+				A1D71A63260C930400487486 /* ProfileDataSourceProtocol.swift in Sources */,
+				A1D71A66260C933600487486 /* ProfileDataSource.swift in Sources */,
+				A1D71A6A260C936B00487486 /* ProfileEntity.swift in Sources */,
+				A1D71A71260C95C300487486 /* ProfileInjection.swift in Sources */,
+				A1D71A74260C962F00487486 /* ProfileUseCase.swift in Sources */,
+				A1D71A0C260C800500487486 /* AppDelegate.swift in Sources */,
+				A1D71A6D260C952300487486 /* ProfileRepository.swift in Sources */,
+				A1D71A80260C971D00487486 /* ProfilePresenter.swift in Sources */,
+				A1D71A0E260C800500487486 /* SceneDelegate.swift in Sources */,
+				A1D71A78260C967D00487486 /* ProfileInteractor.swift in Sources */,
+				A1D71A10260C800500487486 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A1D71A19260C800600487486 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1D71A1A260C800600487486 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A1D71A1D260C800600487486 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A1D71A1E260C800600487486 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1D71A20260C800600487486 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AA420F7E1805FEA1B9ACCE9 /* Pods-Comflix.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Comflix/Preview Content\"";
+				DEVELOPMENT_TEAM = KFYJQYMB2X;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Comflix/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Comflix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1D71A21260C800600487486 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A75836759C6A9AC793AA04EE /* Pods-Comflix.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Comflix/Preview Content\"";
+				DEVELOPMENT_TEAM = KFYJQYMB2X;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Comflix/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Comflix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1D71A03260C800500487486 /* Build configuration list for PBXProject "Comflix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1D71A1D260C800600487486 /* Debug */,
+				A1D71A1E260C800600487486 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1D71A1F260C800600487486 /* Build configuration list for PBXNativeTarget "Comflix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1D71A20260C800600487486 /* Debug */,
+				A1D71A21260C800600487486 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1D71A00260C800500487486 /* Project object */;
+}
