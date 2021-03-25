@@ -27,6 +27,9 @@
 		A1D71A80260C971D00487486 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A7F260C971D00487486 /* ProfilePresenter.swift */; };
 		A1D71AA0260C9EC600487486 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A9F260C9EC600487486 /* ProfileModel.swift */; };
 		A1D71AA5260CA57100487486 /* ProfileMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71AA4260CA57100487486 /* ProfileMapper.swift */; };
+		A1D71AAA260CB10100487486 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71AA9260CB10100487486 /* ActivityIndicator.swift */; };
+		A1D71AAF260CB1B600487486 /* FavoriteGenreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71AAE260CB1B600487486 /* FavoriteGenreItem.swift */; };
+		A1D71AB4260CB3B200487486 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71AB3260CB3B200487486 /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,9 @@
 		A1D71A7F260C971D00487486 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		A1D71A9F260C9EC600487486 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		A1D71AA4260CA57100487486 /* ProfileMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMapper.swift; sourceTree = "<group>"; };
+		A1D71AA9260CB10100487486 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		A1D71AAE260CB1B600487486 /* FavoriteGenreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGenreItem.swift; sourceTree = "<group>"; };
+		A1D71AB3260CB3B200487486 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		A75836759C6A9AC793AA04EE /* Pods-Comflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comflix.release.xcconfig"; path = "Target Support Files/Pods-Comflix/Pods-Comflix.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +180,7 @@
 		A1D71A52260C897600487486 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A1D71AAD260CB1A100487486 /* FavoriteGenreItem */,
 				A1D71A53260C89AF00487486 /* ProfileView.swift */,
 			);
 			path = View;
@@ -182,7 +189,9 @@
 		A1D71A57260C8EE000487486 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A1D71AB2260CB39D00487486 /* Extensions */,
 				A1D71AA3260CA55F00487486 /* Mapper */,
+				A1D71AA8260CB0F200487486 /* View */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -280,6 +289,30 @@
 				A1D71AA4260CA57100487486 /* ProfileMapper.swift */,
 			);
 			path = Mapper;
+			sourceTree = "<group>";
+		};
+		A1D71AA8260CB0F200487486 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71AA9260CB10100487486 /* ActivityIndicator.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1D71AAD260CB1A100487486 /* FavoriteGenreItem */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71AAE260CB1B600487486 /* FavoriteGenreItem.swift */,
+			);
+			path = FavoriteGenreItem;
+			sourceTree = "<group>";
+		};
+		A1D71AB2260CB39D00487486 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A1D71AB3260CB3B200487486 /* String+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,7 +450,9 @@
 				A1D71AA0260C9EC600487486 /* ProfileModel.swift in Sources */,
 				A1D71A7C260C971600487486 /* ProfilePresenterProtocol.swift in Sources */,
 				A1D71A54260C89AF00487486 /* ProfileView.swift in Sources */,
+				A1D71AB4260CB3B200487486 /* String+Extension.swift in Sources */,
 				A1D71A5F260C92CD00487486 /* ProfileRepositoryProtocol.swift in Sources */,
+				A1D71AAF260CB1B600487486 /* FavoriteGenreItem.swift in Sources */,
 				A1D71AA5260CA57100487486 /* ProfileMapper.swift in Sources */,
 				A1D71A63260C930400487486 /* ProfileDataSourceProtocol.swift in Sources */,
 				A1D71A66260C933600487486 /* ProfileDataSource.swift in Sources */,
@@ -430,6 +465,7 @@
 				A1D71A0E260C800500487486 /* SceneDelegate.swift in Sources */,
 				A1D71A78260C967D00487486 /* ProfileInteractor.swift in Sources */,
 				A1D71A10260C800500487486 /* ContentView.swift in Sources */,
+				A1D71AAA260CB10100487486 /* ActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

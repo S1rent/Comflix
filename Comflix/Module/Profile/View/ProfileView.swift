@@ -13,22 +13,33 @@ struct ProfileView: View {
     @ObservedObject var presenter: ProfilePresenter
     
     var body: some View {
-        ScrollView {
-           profileImage
-           profileName
-           profileEmail
-        }.padding(
-            [.leading, .trailing],
-            16
-        ).onAppear {
-            if self.presenter.profileModel == nil {
-                self.presenter.getProfileData()
+        if presenter.loadingState {
+          VStack {
+            Text("Loading...")
+            ActivityIndicator()
+          }
+        } else {
+            ScrollView {
+                profileImage
+                profileName
+                profileEmail
+                separatorView
+                labelFavoriteGenre
+                profileFavoriteGenre
+            }.padding(
+                [.leading, .trailing],
+                16
+            ).onAppear {
+                if self.presenter.profileModel == nil {
+                    self.presenter.getProfileData()
+                }
             }
         }
     }
 }
 
 extension ProfileView {
+    // Header Section
     var profileImage: some View {
         WebImage(
             url: URL(string: self.presenter.profileModel?.userPhotoURL ?? "")
@@ -61,5 +72,31 @@ extension ProfileView {
         ).font(
             .body
         ).lineLimit(3)
+    }
+    
+    // Favorite Genre Section
+    var labelFavoriteGenre: some View {
+        Text(
+            "Favorite Movie Genre"
+        ).bold()
+        .font(.title)
+        .lineLimit(3)
+    }
+    
+    var profileFavoriteGenre: some View {
+        ForEach(
+            self.presenter.profileModel?.userFavoriteMovieCategory ?? []
+        ) { category in
+      ZStack {
+          FavoriteGenreItem(genre:  category)
+          }
+      }.padding(8)
+    }
+    
+    // Other View
+    var separatorView: some View {
+        ZStack {
+            Color.black.ignoresSafeArea()
+        }.frame(width: UIScreen.main.bounds.width - 32, height: 2, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
     }
 }
