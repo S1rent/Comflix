@@ -9,5 +9,6 @@ target 'Comflix' do
   pod 'Alamofire'
   pod 'SwiftLint'
   pod 'SDWebImageSwiftUI'
+  pod 'RealmSwift'
 
 end
