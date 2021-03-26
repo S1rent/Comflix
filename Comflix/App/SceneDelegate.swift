@@ -14,9 +14,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
-        let useCase = ProfileInjection.init().provideUseCase()
+        let profileUseCase = ProfileInjection.init().provideUseCase()
 
-        let profilePresenter = ProfilePresenter(useCase: useCase)
+        let profilePresenter = ProfilePresenter(useCase: profileUseCase)
         
         let contentView = ContentView().environmentObject(profilePresenter)
 

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8C345DE2A1563AB0B687C757 /* Pods_Comflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E06D7C0881A7BE793F86CA /* Pods_Comflix.framework */; };
+		A1D2A423260D8B3900D6558E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2A422260D8B3900D6558E /* HomeView.swift */; };
+		A1D2A428260D900E00D6558E /* HomePosterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2A427260D900E00D6558E /* HomePosterItem.swift */; };
+		A1D2A42D260D94EE00D6558E /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2A42C260D94EE00D6558E /* SeparatorView.swift */; };
 		A1D71A0C260C800500487486 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A0B260C800500487486 /* AppDelegate.swift */; };
 		A1D71A0E260C800500487486 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A0D260C800500487486 /* SceneDelegate.swift */; };
 		A1D71A10260C800500487486 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71A0F260C800500487486 /* ContentView.swift */; };
@@ -35,6 +38,9 @@
 /* Begin PBXFileReference section */
 		6AA420F7E1805FEA1B9ACCE9 /* Pods-Comflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comflix.debug.xcconfig"; path = "Target Support Files/Pods-Comflix/Pods-Comflix.debug.xcconfig"; sourceTree = "<group>"; };
 		84E06D7C0881A7BE793F86CA /* Pods_Comflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1D2A422260D8B3900D6558E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A1D2A427260D900E00D6558E /* HomePosterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePosterItem.swift; sourceTree = "<group>"; };
+		A1D2A42C260D94EE00D6558E /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		A1D71A08260C800500487486 /* Comflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Comflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D71A0B260C800500487486 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1D71A0D260C800500487486 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,47 @@
 				A75836759C6A9AC793AA04EE /* Pods-Comflix.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A1D2A41E260D8AFE00D6558E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A1D2A420260D8B1E00D6558E /* Presenter */,
+				A1D2A421260D8B2300D6558E /* Router */,
+				A1D2A41F260D8B1800D6558E /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A1D2A41F260D8B1800D6558E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1D2A426260D8E7A00D6558E /* HomePosterItem */,
+				A1D2A422260D8B3900D6558E /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1D2A420260D8B1E00D6558E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A1D2A421260D8B2300D6558E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A1D2A426260D8E7A00D6558E /* HomePosterItem */ = {
+			isa = PBXGroup;
+			children = (
+				A1D2A427260D900E00D6558E /* HomePosterItem.swift */,
+			);
+			path = HomePosterItem;
 			sourceTree = "<group>";
 		};
 		A1D719FF260C800500487486 = {
@@ -153,6 +200,7 @@
 		A1D71A4D260C85C800487486 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A1D2A41E260D8AFE00D6558E /* Home */,
 				A1D71A51260C895C00487486 /* Profile */,
 			);
 			path = Module;
@@ -295,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				A1D71AA9260CB10100487486 /* ActivityIndicator.swift */,
+				A1D2A42C260D94EE00D6558E /* SeparatorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -447,6 +496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1D2A42D260D94EE00D6558E /* SeparatorView.swift in Sources */,
 				A1D71AA0260C9EC600487486 /* ProfileModel.swift in Sources */,
 				A1D71A7C260C971600487486 /* ProfilePresenterProtocol.swift in Sources */,
 				A1D71A54260C89AF00487486 /* ProfileView.swift in Sources */,
@@ -460,8 +510,10 @@
 				A1D71A71260C95C300487486 /* ProfileInjection.swift in Sources */,
 				A1D71A74260C962F00487486 /* ProfileUseCase.swift in Sources */,
 				A1D71A0C260C800500487486 /* AppDelegate.swift in Sources */,
+				A1D2A423260D8B3900D6558E /* HomeView.swift in Sources */,
 				A1D71A6D260C952300487486 /* ProfileRepository.swift in Sources */,
 				A1D71A80260C971D00487486 /* ProfilePresenter.swift in Sources */,
+				A1D2A428260D900E00D6558E /* HomePosterItem.swift in Sources */,
 				A1D71A0E260C800500487486 /* SceneDelegate.swift in Sources */,
 				A1D71A78260C967D00487486 /* ProfileInteractor.swift in Sources */,
 				A1D71A10260C800500487486 /* ContentView.swift in Sources */,

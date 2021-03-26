@@ -12,13 +12,8 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            ProfileView(presenter: profilePresenter)
-                .tabItem {
-                    VStack {
-                        Image(systemName: "person.fill")
-                        Text("Profile")
-                    }
-                }.tag(2)
+            homeView
+            profileView
         }
     }
 }
@@ -26,5 +21,37 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+extension ContentView {
+    // Home Page
+    var homeView: some View {
+        HomeView()
+        .tabItem {
+            VStack {
+                Image(
+                    systemName: "house"
+                )
+                Text(
+                    "Home"
+                ).foregroundColor(.white)
+            }
+        }.tag(0)
+    }
+    
+    // Profile Page
+    var profileView: some View {
+        ProfileView(presenter: profilePresenter)
+        .tabItem {
+            VStack {
+                Image(
+                    systemName: "person"
+                )
+                Text(
+                    "Profile"
+                ).foregroundColor(.white)
+            }
+        }.tag(2)
     }
 }

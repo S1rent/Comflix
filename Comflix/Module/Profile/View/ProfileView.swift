@@ -19,11 +19,14 @@ struct ProfileView: View {
             ActivityIndicator()
           }
         } else {
-            ScrollView {
+            ScrollView(
+                .vertical,
+                showsIndicators: false
+            ) {
                 profileImage
                 profileName
                 profileEmail
-                separatorView
+                SeparatorView()
                 labelFavoriteGenre
                 profileFavoriteGenre
             }.padding(
@@ -91,12 +94,5 @@ extension ProfileView {
           FavoriteGenreItem(genre:  category)
           }
       }.padding(8)
-    }
-    
-    // Other View
-    var separatorView: some View {
-        ZStack {
-            Color.black.ignoresSafeArea()
-        }.frame(width: UIScreen.main.bounds.width - 32, height: 2, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
     }
 }
