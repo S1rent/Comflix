@@ -9,6 +9,7 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct HomePosterItem: View {
+    var movie: MovieModel
     
     var body: some View {
         VStack(
@@ -21,24 +22,19 @@ struct HomePosterItem: View {
     }
 }
 
-struct HomePosterItem_Previews: PreviewProvider {
-    static var previews: some View {
-        HomePosterItem()
-    }
-}
-
 extension HomePosterItem {
     var imageView: some View {
         WebImage(
             url: URL(
-                string: "https://image.tmdb.org/t/p/w500/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg"
+                string: "https://image.tmdb.org/t/p/w500/"+self.movie.moviePosterURL
             )
         )
         .resizable()
         .indicator(
             .activity
         )
-        .transition(.fade(duration: 0.5)
+        .transition(
+            .fade(duration: 0.5)
         )
         .frame(
             width: 160,
@@ -52,7 +48,7 @@ extension HomePosterItem {
     var titleView: some View {
         ZStack {
             Color.black.ignoresSafeArea()
-            Text("Titlee")
+            Text(self.movie.movieTitle)
             .foregroundColor(
                 .white
             ).padding(

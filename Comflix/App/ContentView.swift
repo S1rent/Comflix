@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var profilePresenter: ProfilePresenter
+    @EnvironmentObject var homePresenter: HomePresenter
     
     var body: some View {
         TabView {
@@ -27,7 +28,7 @@ struct ContentView_Previews: PreviewProvider {
 extension ContentView {
     // Home Page
     var homeView: some View {
-        HomeView()
+        HomeView(presenter: homePresenter)
         .tabItem {
             VStack {
                 Image(

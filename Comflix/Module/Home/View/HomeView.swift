@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    @ObservedObject var presenter: HomePresenter
+    
     var body: some View {
         ScrollView(
             .vertical,
@@ -25,13 +27,11 @@ struct HomeView: View {
                 bottom: 16,
                 trailing: 16
             )
-        )
-    }
-}
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
+        ).onAppear {
+            if self.presenter.trendingMovies.isEmpty {
+                self.presenter.getTrendingMovies()
+            }
+        }
     }
 }
 
@@ -94,11 +94,15 @@ extension HomeView {
                 spacing: -8
             ) {
                 ForEach(
-                    1..<10
-                ) { _ in
-                    {
-                    HomePosterItem()
-                    }()
+                    self.presenter.trendingMovies
+                ) { movie in
+                    self.presenter.linkBuilder(
+                        with: movie
+                    ) {
+                      HomePosterItem(
+                        movie: movie
+                      )
+                    }
                 }
             }
         }
@@ -139,11 +143,15 @@ extension HomeView {
                 spacing: -8
             ) {
                 ForEach(
-                    1..<10
-                ) { _ in
-                    {
-                    HomePosterItem()
-                    }()
+                    self.presenter.trendingMovies
+                ) { movie in
+                    self.presenter.linkBuilder(
+                        with: movie
+                    ) {
+                      HomePosterItem(
+                        movie: movie
+                      )
+                    }
                 }
             }
         }

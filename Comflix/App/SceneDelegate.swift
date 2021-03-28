@@ -18,7 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let profilePresenter = ProfilePresenter(useCase: profileUseCase)
         
+        let homeUseCase = MoviesInjection.init().provideMovies()
+        let homePresenter = HomePresenter(useCase: homeUseCase)
+        
         let contentView = ContentView().environmentObject(profilePresenter)
+            .environmentObject(homePresenter)
 
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
