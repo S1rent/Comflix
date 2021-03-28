@@ -223,6 +223,29 @@
 			path = Movies;
 			sourceTree = "<group>";
 		};
+		A10251E82610E2710092C0D7 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				A10251EA2610E2830092C0D7 /* Presenter */,
+				A10251E92610E2800092C0D7 /* View */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		A10251E92610E2800092C0D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A10251EA2610E2830092C0D7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		A1D2A41E260D8AFE00D6558E /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +351,7 @@
 		A1D71A4D260C85C800487486 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A10251E82610E2710092C0D7 /* Detail */,
 				A1D2A41E260D8AFE00D6558E /* Home */,
 				A1D71A51260C895C00487486 /* Profile */,
 			);

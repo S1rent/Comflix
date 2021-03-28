@@ -11,29 +11,35 @@ struct HomeView: View {
     @ObservedObject var presenter: HomePresenter
     
     var body: some View {
-        ScrollView(
-            .vertical,
-            showsIndicators: false
-        ) {
-            greetView
-            SeparatorView()
-            trendingMoviesView
-            SeparatorView()
-            nowPlayingMoviesView
-        }.padding(
-            EdgeInsets(
-                top: 8,
-                leading: 16,
-                bottom: 16,
-                trailing: 16
-            )
-        ).onAppear {
-            if self.presenter.trendingMovies.isEmpty {
-                self.presenter.getTrendingMovies()
-            }
-            
-            if self.presenter.availableMovies.isEmpty {
-                self.presenter.getAvailableMovies()
+        ZStack {
+            if self.presenter.loadingState {
+                loadingIndicator
+            } else {
+                ScrollView(
+                    .vertical,
+                    showsIndicators: false
+                ) {
+                    greetView
+                    SeparatorView()
+                    trendingMoviesView
+                    SeparatorView()
+                    nowPlayingMoviesView
+                }.padding(
+                    EdgeInsets(
+                        top: 8,
+                        leading: 16,
+                        bottom: 16,
+                        trailing: 16
+                    )
+                ).onAppear {
+                    if self.presenter.trendingMovies.isEmpty {
+                        self.presenter.getTrendingMovies()
+                    }
+                    
+                    if self.presenter.availableMovies.isEmpty {
+                        self.presenter.getAvailableMovies()
+                    }
+                }
             }
         }
     }
@@ -158,6 +164,13 @@ extension HomeView {
                     }
                 }
             }
+        }
+    }
+    
+    var loadingIndicator: some View {
+        VStack {
+            ActivityIndicator()
+            Text("Loading...").bold()
         }
     }
 }
