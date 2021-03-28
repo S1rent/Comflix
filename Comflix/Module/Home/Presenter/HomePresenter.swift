@@ -76,10 +76,12 @@ class HomePresenter: ObservableObject {
       with movie: MovieModel,
       @ViewBuilder content: () -> Content
     ) -> some View {
-      NavigationLink(
-          destination: router.makeDetailView(
-            with: movie
-          )
-      ) { content() }
+        NavigationLink(
+            destination: router.makeDetailView(
+                with: movie
+            )
+        ) {
+            content()
+        }
     }
 }

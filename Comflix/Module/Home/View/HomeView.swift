@@ -11,36 +11,39 @@ struct HomeView: View {
     @ObservedObject var presenter: HomePresenter
     
     var body: some View {
-        ZStack {
-            if self.presenter.loadingState {
-                loadingIndicator
-            } else {
-                ScrollView(
-                    .vertical,
-                    showsIndicators: false
-                ) {
-                    greetView
-                    SeparatorView()
-                    trendingMoviesView
-                    SeparatorView()
-                    nowPlayingMoviesView
-                }.padding(
-                    EdgeInsets(
-                        top: 8,
-                        leading: 16,
-                        bottom: 16,
-                        trailing: 16
-                    )
-                ).onAppear {
-                    if self.presenter.trendingMovies.isEmpty {
-                        self.presenter.getTrendingMovies()
-                    }
-                    
-                    if self.presenter.availableMovies.isEmpty {
-                        self.presenter.getAvailableMovies()
+        NavigationView {
+            ZStack {
+                if self.presenter.loadingState {
+                    loadingIndicator
+                } else {
+                    ScrollView(
+                        .vertical,
+                        showsIndicators: false
+                    ) {
+                        greetView
+                        SeparatorView()
+                        trendingMoviesView
+                        SeparatorView()
+                        nowPlayingMoviesView
+                    }.padding(
+                        EdgeInsets(
+                            top: 0,
+                            leading: 16,
+                            bottom: 16,
+                            trailing: 16
+                        )
+                    ).onAppear {
+                        if self.presenter.trendingMovies.isEmpty {
+                            self.presenter.getTrendingMovies()
+                        }
+                        
+                        if self.presenter.availableMovies.isEmpty {
+                            self.presenter.getAvailableMovies()
+                        }
                     }
                 }
-            }
+            }.navigationBarTitle("")
+            .navigationBarHidden(true)
         }
     }
 }
@@ -109,9 +112,9 @@ extension HomeView {
                     self.presenter.linkBuilder(
                         with: movie
                     ) {
-                      HomePosterItem(
-                        movie: movie
-                      )
+                        HomePosterItem(
+                            movie: movie
+                        )
                     }
                 }
             }
@@ -158,9 +161,9 @@ extension HomeView {
                     self.presenter.linkBuilder(
                         with: movie
                     ) {
-                      HomePosterItem(
-                        movie: movie
-                      )
+                        HomePosterItem(
+                            movie: movie
+                        )
                     }
                 }
             }
