@@ -9,7 +9,8 @@ import Foundation
 
 final class MoviesMapper {
     static func mapMovieResponseToEntities(
-        input response: [MovieResponse]
+        input response: [MovieResponse],
+        displayType: String
         ) -> [MovieEntity] {
         
         return response.map { result in
@@ -19,6 +20,7 @@ final class MoviesMapper {
             entity.movieName = result.movieName ?? ""
             entity.moviePosterURL = result.moviePosterURL ?? ""
             entity.movieBackdropURL = result.movieBackdropURL ?? ""
+            entity.displayType = displayType
             return entity
         }
     }

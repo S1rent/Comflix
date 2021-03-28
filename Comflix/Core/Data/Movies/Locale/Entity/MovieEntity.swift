@@ -13,8 +13,14 @@ class MovieEntity: Object {
     @objc dynamic var movieName: String = ""
     @objc dynamic var moviePosterURL: String = ""
     @objc dynamic var movieBackdropURL: String = ""
+    @objc dynamic var displayType: String = ""
 
     override static func primaryKey() -> String? {
         return "movieID"
     }
+}
+
+enum MovieEntityDisplayTypeEnum: String {
+    case trending = "trending"
+    case availableNow = "available_now"
 }

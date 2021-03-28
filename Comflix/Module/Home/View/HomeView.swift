@@ -31,6 +31,10 @@ struct HomeView: View {
             if self.presenter.trendingMovies.isEmpty {
                 self.presenter.getTrendingMovies()
             }
+            
+            if self.presenter.availableMovies.isEmpty {
+                self.presenter.getAvailableMovies()
+            }
         }
     }
 }
@@ -143,7 +147,7 @@ extension HomeView {
                 spacing: -8
             ) {
                 ForEach(
-                    self.presenter.trendingMovies
+                    self.presenter.availableMovies
                 ) { movie in
                     self.presenter.linkBuilder(
                         with: movie

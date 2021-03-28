@@ -20,4 +20,8 @@ class MoviesInteractor: MoviesUseCase {
     func getTrendingMovies() -> AnyPublisher<[MovieModel], Error> {
         return repository.getTrendingMovies()
     }
+    
+    func getAvailableMovies() -> AnyPublisher<[MovieModel], Error> {
+        return repository.getAvailableMovies()
+    }
 }

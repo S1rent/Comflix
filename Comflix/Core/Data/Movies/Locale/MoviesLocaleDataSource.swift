@@ -28,6 +28,7 @@ extension MoviesLocaleDataSource: MoviesLocaleDataSourceProtocol {
             if let realm = self.realm {
                 let movies: Results<MovieEntity> = {
                     realm.objects(MovieEntity.self)
+                    .filter("displayType='trending'")
                 }()
                 completion(
                     .success(
@@ -46,7 +47,7 @@ extension MoviesLocaleDataSource: MoviesLocaleDataSourceProtocol {
         }.eraseToAnyPublisher()
     }
     
-    func addTrendingMovies(with movies: [MovieEntity]) -> AnyPublisher<Bool, Error> {
+    func addMovies(with movies: [MovieEntity]) -> AnyPublisher<Bool, Error> {
         return Future<Bool, Error> { completion in
             if let realm = self.realm {
                 do {
@@ -63,6 +64,32 @@ extension MoviesLocaleDataSource: MoviesLocaleDataSourceProtocol {
                         )
                     )
                 }
+            } else {
+                completion(
+                    .failure(
+                        DatabaseErrorEnum.errorInvalidInstance
+                    )
+                )
+            }
+        }.eraseToAnyPublisher()
+    }
+    
+    func getAvailableMovies() -> AnyPublisher<[MovieEntity], Error> {
+        return Future<[MovieEntity], Error> { completion in
+            if let realm = self.realm {
+                let movies: Results<MovieEntity> = {
+                    realm.objects(MovieEntity.self)
+                        .filter(
+                            "displayType='\(MovieEntityDisplayTypeEnum.availableNow.rawValue)'"
+                        )
+                }()
+                completion(
+                    .success(
+                        movies.toArray(
+                            ofType: MovieEntity.self
+                        )
+                    )
+                )
             } else {
                 completion(
                     .failure(

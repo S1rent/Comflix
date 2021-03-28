@@ -25,7 +25,7 @@ extension MoviesRemoteDataSource: MoviesRemoteDataSourceProtocol {
         
         return Future<[MovieResponse], Error> { completion in
             if let requestURL = URL(
-                string: "\(self.baseURL)"+MoviesRemoteRequestEnum.getTrendingMovies.rawValue
+                string: self.baseURL+MoviesRemoteRequestEnum.getTrendingMovies.rawValue
             ) {
                 AF.request(
                     requestURL,
@@ -54,8 +54,45 @@ extension MoviesRemoteDataSource: MoviesRemoteDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
+    
+    func getAvailableNowMovies() -> AnyPublisher<[MovieResponse], Error> {
+        let parameters: Parameters = [
+            "api_key": apiKey
+        ]
+        
+        return Future<[MovieResponse], Error> { completion in
+            if let requestURL = URL(
+                string: self.baseURL+MoviesRemoteRequestEnum.getAvailableNowMovies.rawValue
+            ) {
+                AF.request(
+                    requestURL,
+                    method: .get,
+                    parameters: parameters
+                ).validate()
+                .responseDecodable(
+                    of: MoviesResponseWrapper.self
+                ) { response in
+                    switch response.result {
+                    case .success(let value):
+                        completion(
+                            .success(
+                                value.data ?? []
+                            )
+                        )
+                    case .failure:
+                        completion(
+                            .failure(
+                                URLErrorEnum.errorInvalidResponse
+                            )
+                        )
+                    }
+                }
+            }
+        }.eraseToAnyPublisher()
+    }
 }
 
 internal enum MoviesRemoteRequestEnum: String {
     case getTrendingMovies = "movie/popular"
+    case getAvailableNowMovies = "movie/now_playing"
 }
