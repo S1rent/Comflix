@@ -25,6 +25,8 @@ struct HomeView: View {
                         trendingMoviesView
                         SeparatorView()
                         nowPlayingMoviesView
+                        SeparatorView()
+                        randomMovieView
                     }.padding(
                         EdgeInsets(
                             top: 0,
@@ -124,7 +126,10 @@ extension HomeView {
     // Now Playing Movies View
     var nowPlayingMoviesView: some View {
         Group {
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(
+                alignment: .leading,
+                spacing: 8
+            ) {
                 nowPlayingMoviesTitle
                 nowPlayingMoviesList
             }
@@ -132,7 +137,7 @@ extension HomeView {
             EdgeInsets(
                 top: 0,
                 leading: 16,
-                bottom: 0,
+                bottom: 8,
                 trailing: 0
             )
         )
@@ -168,6 +173,63 @@ extension HomeView {
                 }
             }
         }
+    }
+    
+    var randomMovieView: some View {
+        Group {
+            VStack(
+                alignment: .center,
+                spacing: 8
+            ) {
+                randomMovieTitle
+                randomMovieCellView
+            }
+        }.padding(
+            EdgeInsets(
+                top: 0,
+                leading: 16,
+                bottom: 8,
+                trailing: 16
+            )
+        )
+    }
+    
+    var randomMovieTitle: some View {
+        Text(
+            "Don't know what to watch ? we'll pick for you"
+        ).bold()
+        .font(.title)
+        .multilineTextAlignment(.leading)
+        .frame(
+            width: UIScreen.main.bounds.width - 32,
+            height: .infinity,
+            alignment: .leading
+        )
+    }
+    
+    var randomMovieCellView: some View {
+        self.presenter.linkBuilder(with: self.presenter.availableMovies.first ?? MovieModel(id: 2, movieTitle: "", moviePosterURL: "", movieBackdropURL: ""), content: {
+            VStack {
+                Text("Random Movie")
+                .bold()
+                .font(.title)
+            }
+            .frame(
+                width: UIScreen.main.bounds.width-32,
+                height: 75,
+                alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/
+            )
+            .border(Color.black, width: 1.5)
+            .cornerRadius(6)
+            .overlay(
+                RoundedRectangle(
+                    cornerRadius: 6
+                ).stroke(
+                    Color.black,
+                    lineWidth: 2
+                )
+            )
+        }).buttonStyle(PlainButtonStyle())
     }
     
     var loadingIndicator: some View {
