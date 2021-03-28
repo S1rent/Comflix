@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8C345DE2A1563AB0B687C757 /* Pods_Comflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E06D7C0881A7BE793F86CA /* Pods_Comflix.framework */; };
+		A10251982610BEFB0092C0D7 /* MoviesLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10251972610BEFB0092C0D7 /* MoviesLocaleDataSource.swift */; };
+		A102519C2610BF140092C0D7 /* MoviesResponseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102519B2610BF140092C0D7 /* MoviesResponseWrapper.swift */; };
+		A102519F2610BF260092C0D7 /* MoviesRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102519E2610BF260092C0D7 /* MoviesRemoteDataSource.swift */; };
 		A1D2A423260D8B3900D6558E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2A422260D8B3900D6558E /* HomeView.swift */; };
 		A1D2A428260D900E00D6558E /* HomePosterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2A427260D900E00D6558E /* HomePosterItem.swift */; };
 		A1D2A42D260D94EE00D6558E /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2A42C260D94EE00D6558E /* SeparatorView.swift */; };
@@ -38,6 +41,9 @@
 /* Begin PBXFileReference section */
 		6AA420F7E1805FEA1B9ACCE9 /* Pods-Comflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comflix.debug.xcconfig"; path = "Target Support Files/Pods-Comflix/Pods-Comflix.debug.xcconfig"; sourceTree = "<group>"; };
 		84E06D7C0881A7BE793F86CA /* Pods_Comflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10251972610BEFB0092C0D7 /* MoviesLocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesLocaleDataSource.swift; sourceTree = "<group>"; };
+		A102519B2610BF140092C0D7 /* MoviesResponseWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesResponseWrapper.swift; sourceTree = "<group>"; };
+		A102519E2610BF260092C0D7 /* MoviesRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRemoteDataSource.swift; sourceTree = "<group>"; };
 		A1D2A422260D8B3900D6558E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A1D2A427260D900E00D6558E /* HomePosterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePosterItem.swift; sourceTree = "<group>"; };
 		A1D2A42C260D94EE00D6558E /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
@@ -95,6 +101,48 @@
 				A75836759C6A9AC793AA04EE /* Pods-Comflix.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A10251922610BE740092C0D7 /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				A10251932610BED00092C0D7 /* Locale */,
+				A10251942610BED90092C0D7 /* Remote */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		A10251932610BED00092C0D7 /* Locale */ = {
+			isa = PBXGroup;
+			children = (
+				A10251962610BEE80092C0D7 /* Entity */,
+				A10251972610BEFB0092C0D7 /* MoviesLocaleDataSource.swift */,
+			);
+			path = Locale;
+			sourceTree = "<group>";
+		};
+		A10251942610BED90092C0D7 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				A10251952610BEE30092C0D7 /* Response */,
+				A102519E2610BF260092C0D7 /* MoviesRemoteDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		A10251952610BEE30092C0D7 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				A102519B2610BF140092C0D7 /* MoviesResponseWrapper.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		A10251962610BEE80092C0D7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		A1D2A41E260D8AFE00D6558E /* Home */ = {
@@ -263,6 +311,7 @@
 		A1D71A5A260C8EED00487486 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				A10251922610BE740092C0D7 /* Movies */,
 				A1D71A5D260C92C000487486 /* Profile */,
 			);
 			path = Data;
@@ -497,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1D2A42D260D94EE00D6558E /* SeparatorView.swift in Sources */,
+				A102519C2610BF140092C0D7 /* MoviesResponseWrapper.swift in Sources */,
 				A1D71AA0260C9EC600487486 /* ProfileModel.swift in Sources */,
 				A1D71A7C260C971600487486 /* ProfilePresenterProtocol.swift in Sources */,
 				A1D71A54260C89AF00487486 /* ProfileView.swift in Sources */,
@@ -511,7 +561,9 @@
 				A1D71A74260C962F00487486 /* ProfileUseCase.swift in Sources */,
 				A1D71A0C260C800500487486 /* AppDelegate.swift in Sources */,
 				A1D2A423260D8B3900D6558E /* HomeView.swift in Sources */,
+				A102519F2610BF260092C0D7 /* MoviesRemoteDataSource.swift in Sources */,
 				A1D71A6D260C952300487486 /* ProfileRepository.swift in Sources */,
+				A10251982610BEFB0092C0D7 /* MoviesLocaleDataSource.swift in Sources */,
 				A1D71A80260C971D00487486 /* ProfilePresenter.swift in Sources */,
 				A1D2A428260D900E00D6558E /* HomePosterItem.swift in Sources */,
 				A1D71A0E260C800500487486 /* SceneDelegate.swift in Sources */,
