@@ -34,7 +34,9 @@ extension HomePosterItem {
             .activity
         )
         .transition(
-            .fade(duration: 0.5)
+            .fade(
+                duration: 0.5
+            )
         )
         .frame(
             width: 160,
