@@ -26,4 +26,5 @@ class MovieEntity: Object {
 enum MovieEntityDisplayTypeEnum: String {
     case trending = "trending"
     case availableNow = "available_now"
+    case randomMovie = "random_movie"
 }

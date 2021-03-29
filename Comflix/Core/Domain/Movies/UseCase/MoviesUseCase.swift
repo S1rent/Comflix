@@ -11,4 +11,5 @@ import Combine
 protocol MoviesUseCase {
     func getTrendingMovies() -> AnyPublisher<[MovieModel], Error>
     func getAvailableMovies() -> AnyPublisher<[MovieModel], Error>
+    func getRandomMovie() -> AnyPublisher<[MovieModel], Error>
 }

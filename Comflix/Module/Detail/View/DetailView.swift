@@ -26,7 +26,11 @@ struct DetailView: View {
                     movieReleaseDateView
                 }
             )
-        }.navigationBarTitle(
+        }.onAppear(perform: {
+            if self.presenter.isRandom {
+                self.presenter.getRandomMovie()
+            }
+        }).navigationBarTitle(
             "Movie Detail",
             displayMode: .inline
         )

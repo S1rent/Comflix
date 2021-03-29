@@ -73,12 +73,14 @@ class HomePresenter: ObservableObject {
     }
     
     func linkBuilder<Content: View>(
-      with movie: MovieModel,
-      @ViewBuilder content: () -> Content
+        with movie: MovieModel,
+        @ViewBuilder content: () -> Content,
+        isRandom: Bool = false
     ) -> some View {
         NavigationLink(
             destination: router.makeDetailView(
-                with: movie
+                with: movie,
+                isRandom: isRandom
             )
         ) {
             content()

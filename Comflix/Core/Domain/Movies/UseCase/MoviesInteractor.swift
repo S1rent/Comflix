@@ -9,6 +9,7 @@ import Foundation
 import Combine
 
 class MoviesInteractor: MoviesUseCase {
+    
     let repository: MoviesRepositoryProtocol
     
     required init(
@@ -23,5 +24,9 @@ class MoviesInteractor: MoviesUseCase {
     
     func getAvailableMovies() -> AnyPublisher<[MovieModel], Error> {
         return repository.getAvailableMovies()
+    }
+    
+    func getRandomMovie() -> AnyPublisher<[MovieModel], Error> {
+        return repository.getRandomMovie()
     }
 }

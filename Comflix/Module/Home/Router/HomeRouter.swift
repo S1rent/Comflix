@@ -8,11 +8,12 @@
 import SwiftUI
 
 class HomeRouter {
-    func makeDetailView(with movie: MovieModel) -> some View {
+    func makeDetailView(with movie: MovieModel, isRandom: Bool) -> some View {
         let useCase = MoviesInjection.init().provideMovies()
         let presenter = DetailPresenter(
             useCase: useCase,
-            movie: movie
+            movie: movie,
+            isRandom: isRandom
         )
         return DetailView(presenter: presenter)
     }

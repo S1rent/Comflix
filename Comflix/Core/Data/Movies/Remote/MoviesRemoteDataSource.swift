@@ -90,6 +90,44 @@ extension MoviesRemoteDataSource: MoviesRemoteDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
+    
+    func getRandomMovie() -> AnyPublisher<[MovieResponse], Error> {
+        let randomPage = Int.random(in: 1..<300)
+        let parameters: Parameters = [
+            "api_key": apiKey,
+            "page": randomPage
+        ]
+        
+        return Future<[MovieResponse], Error> { completion in
+            if let requestURL = URL(
+                string: self.baseURL+MoviesRemoteRequestEnum.getTrendingMovies.rawValue
+            ) {
+                AF.request(
+                    requestURL,
+                    method: .get,
+                    parameters: parameters
+                ).validate()
+                .responseDecodable(
+                    of: MoviesResponseWrapper.self
+                ) { response in
+                    switch response.result {
+                    case .success(let value):
+                        completion(
+                            .success(
+                                value.data ?? []
+                            )
+                        )
+                    case .failure:
+                        completion(
+                            .failure(
+                                URLErrorEnum.errorInvalidResponse
+                            )
+                        )
+                    }
+                }
+            }
+        }.eraseToAnyPublisher()
+    }
 }
 
 internal enum MoviesRemoteRequestEnum: String {

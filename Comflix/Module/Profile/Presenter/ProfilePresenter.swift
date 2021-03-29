@@ -23,17 +23,22 @@ class ProfilePresenter: ProfilePresenterProtocol, ObservableObject {
     }
     
     func getProfileData() {
-      loadingState = true
-        self.useCase.getProfileData().receive(on: RunLoop.main)
-            .sink(receiveCompletion: { completion in
+        loadingState = true
+        self.useCase.getProfileData()
+        .receive(on: RunLoop.main)
+        .sink(
+            receiveCompletion: { completion in
                 switch completion {
                 case .failure:
-                  self.errorMessage = String(describing: completion)
+                    self.errorMessage = String(describing: completion)
                 case .finished:
-                  self.loadingState = false
+                    self.loadingState = false
                 }
-              }, receiveValue: { data in
-                self.profileModel = data
-              }).store(in: &cancellables)
+            },
+            receiveValue: {
+                data in
+            self.profileModel = data
+            }
+        ).store(in: &cancellables)
     }
 }

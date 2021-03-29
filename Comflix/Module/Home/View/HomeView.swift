@@ -229,7 +229,7 @@ extension HomeView {
                     lineWidth: 2
                 )
             )
-        }).buttonStyle(PlainButtonStyle())
+        }, isRandom: true).buttonStyle(PlainButtonStyle())
     }
     
     var loadingIndicator: some View {

@@ -11,4 +11,5 @@ import Combine
 protocol MoviesRemoteDataSourceProtocol {
     func getTrendingMovies() -> AnyPublisher<[MovieResponse], Error>
     func getAvailableNowMovies() -> AnyPublisher<[MovieResponse], Error>
+    func getRandomMovie() -> AnyPublisher<[MovieResponse], Error>
 }

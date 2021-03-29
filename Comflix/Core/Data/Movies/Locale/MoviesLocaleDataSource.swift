@@ -99,4 +99,30 @@ extension MoviesLocaleDataSource: MoviesLocaleDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
+    
+    func getRandomMovie() -> AnyPublisher<[MovieEntity], Error> {
+        return Future<[MovieEntity], Error> { completion in
+            if let realm = self.realm {
+                let movies: Results<MovieEntity> = {
+                    realm.objects(MovieEntity.self)
+                        .filter(
+                            "displayType='\(MovieEntityDisplayTypeEnum.randomMovie.rawValue)'"
+                        )
+                }()
+                completion(
+                    .success(
+                        movies.toArray(
+                            ofType: MovieEntity.self
+                        )
+                    )
+                )
+            } else {
+                completion(
+                    .failure(
+                        DatabaseErrorEnum.errorInvalidInstance
+                    )
+                )
+            }
+        }.eraseToAnyPublisher()
+    }
 }
