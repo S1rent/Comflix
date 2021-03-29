@@ -208,7 +208,7 @@ extension HomeView {
     }
     
     var randomMovieCellView: some View {
-        self.presenter.linkBuilder(with: self.presenter.availableMovies.first ?? MovieModel(id: 2, movieTitle: "", moviePosterURL: "", movieBackdropURL: ""), content: {
+        self.presenter.linkBuilder(with: MovieModel(id: -1, movieTitle: "", moviePosterURL: "", movieBackdropURL: "", movieRating: 0.0, movieReleaseDate: "", movieDescription: ""), content: {
             VStack {
                 Text("Random Movie")
                 .bold()

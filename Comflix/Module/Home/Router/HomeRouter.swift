@@ -9,6 +9,11 @@ import SwiftUI
 
 class HomeRouter {
     func makeDetailView(with movie: MovieModel) -> some View {
-        return DetailView()
+        let useCase = MoviesInjection.init().provideMovies()
+        let presenter = DetailPresenter(
+            useCase: useCase,
+            movie: movie
+        )
+        return DetailView(presenter: presenter)
     }
 }

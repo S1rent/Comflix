@@ -14,6 +14,9 @@ class MovieEntity: Object {
     @objc dynamic var moviePosterURL: String = ""
     @objc dynamic var movieBackdropURL: String = ""
     @objc dynamic var displayType: String = ""
+    @objc dynamic var movieRating: Double = 0.0
+    @objc dynamic var movieReleaseDate: String = ""
+    @objc dynamic var movieDescription: String = ""
 
     override static func primaryKey() -> String? {
         return "movieID"

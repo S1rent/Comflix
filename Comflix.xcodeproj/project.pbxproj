@@ -52,6 +52,7 @@
 		A1D71AAA260CB10100487486 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71AA9260CB10100487486 /* ActivityIndicator.swift */; };
 		A1D71AAF260CB1B600487486 /* FavoriteGenreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71AAE260CB1B600487486 /* FavoriteGenreItem.swift */; };
 		A1D71AB4260CB3B200487486 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D71AB3260CB3B200487486 /* String+Extension.swift */; };
+		A1F2D811261232F600A8B663 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F2D810261232F600A8B663 /* DetailPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		A1D71AA9260CB10100487486 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		A1D71AAE260CB1B600487486 /* FavoriteGenreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGenreItem.swift; sourceTree = "<group>"; };
 		A1D71AB3260CB3B200487486 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		A1F2D810261232F600A8B663 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		A75836759C6A9AC793AA04EE /* Pods-Comflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comflix.release.xcconfig"; path = "Target Support Files/Pods-Comflix/Pods-Comflix.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -245,6 +247,7 @@
 		A10251EA2610E2830092C0D7 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				A1F2D810261232F600A8B663 /* DetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -662,6 +665,7 @@
 				A10251A62610C0E90092C0D7 /* MoviesLocaleDataSourceProtocol.swift in Sources */,
 				A1D71AA0260C9EC600487486 /* ProfileModel.swift in Sources */,
 				A1D71A7C260C971600487486 /* ProfilePresenterProtocol.swift in Sources */,
+				A1F2D811261232F600A8B663 /* DetailPresenter.swift in Sources */,
 				A1D71A54260C89AF00487486 /* ProfileView.swift in Sources */,
 				A10251D82610CEA90092C0D7 /* MoviesUseCase.swift in Sources */,
 				A1D71AB4260CB3B200487486 /* String+Extension.swift in Sources */,

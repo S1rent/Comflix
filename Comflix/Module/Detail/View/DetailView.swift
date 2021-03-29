@@ -9,6 +9,8 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct DetailView: View {
+    var presenter: DetailPresenter
+    
     var body: some View {
         ScrollView {
             VStack(
@@ -35,7 +37,7 @@ extension DetailView {
     var movieImageView: some View {
         WebImage(
             url: URL(
-                string: "https://d17ivq9b7rppb3.cloudfront.net/original/academy/menjadi_ios_developer_expert_logo_230320222603.jpg"
+                string: "https://image.tmdb.org/t/p/w500/"+self.presenter.movie.movieBackdropURL
             )
         ).resizable()
         .indicator(
@@ -53,7 +55,7 @@ extension DetailView {
     }
     
     var movieTitleView: some View {
-        Text("Movie Title")
+        Text(self.presenter.movie.movieTitle)
             .font(.title)
             .bold()
             .padding(
@@ -77,7 +79,7 @@ extension DetailView {
                 height: 16,
                 alignment: .leading
             )
-            Text("7.4")
+            Text("\(String(format: "%.2f", self.presenter.movie.movieRating))")
             .font(.title)
             .bold()
             .padding(.leading, 8)
@@ -92,7 +94,7 @@ extension DetailView {
     }
     
     var movieLabelView: some View {
-        Text("Movie Title")
+        Text(self.presenter.movie.movieTitle)
             .font(.title)
             .bold()
             .padding(
@@ -123,7 +125,7 @@ extension DetailView {
                         )
                     )
                     .lineLimit(7)
-                Text("Movie DescriptionMovie DescriptionMovie DescriptionMovie DescriptionMovie DescriptionMovie DescriptionMovie DescriptionMovie DescriptionMovie DescriptionMovie DescriptionMovie DescriptionMovie DescriptionMovie DescriptionMovie DescriptionMovie DescriptionMovie Description")
+                Text(self.presenter.movie.movieDescription)
                     .font(
                         .body
                     )
@@ -166,7 +168,7 @@ extension DetailView {
                         height: 16,
                         alignment: .leading
                     )
-                    Text("28 Januari 2021")
+                    Text("\(self.presenter.movie.convertedReleaseDate())")
                     .font(.body)
                     .bold()
                     .padding(.leading, 8)

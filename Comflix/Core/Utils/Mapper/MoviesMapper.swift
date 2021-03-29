@@ -21,6 +21,9 @@ final class MoviesMapper {
             entity.moviePosterURL = result.moviePosterURL ?? ""
             entity.movieBackdropURL = result.movieBackdropURL ?? ""
             entity.displayType = displayType
+            entity.movieRating = result.movieRating ?? 0.0
+            entity.movieReleaseDate = result.movieReleaseDate ?? ""
+            entity.movieDescription = result.movieDescription ?? ""
             return entity
         }
     }
@@ -33,7 +36,10 @@ final class MoviesMapper {
                 id: result.movieID,
                 movieTitle: result.movieName,
                 moviePosterURL: result.moviePosterURL,
-                movieBackdropURL: result.movieBackdropURL
+                movieBackdropURL: result.movieBackdropURL,
+                movieRating: result.movieRating,
+                movieReleaseDate: result.movieReleaseDate,
+                movieDescription: result.movieDescription
             )
         }
     }
@@ -47,7 +53,10 @@ final class MoviesMapper {
                 id: result.movieID ?? 0,
                 movieTitle: result.movieName ?? "",
                 moviePosterURL: result.moviePosterURL ?? "",
-                movieBackdropURL: result.movieBackdropURL ?? ""
+                movieBackdropURL: result.movieBackdropURL ?? "",
+                movieRating: result.movieRating ?? 0.0,
+                movieReleaseDate: result.movieReleaseDate ?? "",
+                movieDescription: result.movieDescription ?? ""
             )
         }
     }
