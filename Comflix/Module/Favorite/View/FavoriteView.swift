@@ -6,19 +6,38 @@
 //
 
 import SwiftUI
+import Combine
 
 struct FavoriteView: View {
+    @ObservedObject var presenter: FavoritePresenter
+    
     var body: some View {
-        ScrollView {
-            VStack {
-                ForEach(1..<10) { _ in
-                    FavoriteItemView()
+        if self.presenter.loadingState {
+            loadingIndicator
+        } else {
+            ScrollView {
+                VStack {
+                    ForEach(self.presenter.favoriteMovies) { movie in
+                        self.presenter.linkBuilder(with: movie, content: {
+                            FavoriteItemView(movie: movie)
+                        })
+                    }
+                }
+            }.onAppear {
+                if self.presenter.favoriteMovies.isEmpty {
+                    self.presenter.getFavoriteMovies()
                 }
             }
         }
+        
     }
 }
 
 extension FavoriteView {
-    
+    var loadingIndicator: some View {
+        VStack {
+            ActivityIndicator()
+            Text("Loading...").bold()
+        }
+    }
 }

@@ -9,6 +9,8 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct FavoriteItemView: View {
+    var movie: MovieModel
+    
     var body: some View {
         VStack(
             alignment: .center,
@@ -54,36 +56,26 @@ extension FavoriteItemView {
     var content: some View {
         VStack {
             Group {
-                ZStack {
-                    Color.black.ignoresSafeArea()
-                    image.padding(5)
-                }.frame(
-                    width: UIScreen.main.bounds.width - 32,
-                    height: 50,
-                    alignment: .center
-                )
-                
-                ZStack {
-                    HStack(
-                        alignment: .firstTextBaseline,
-                        spacing: 8,
-                        content: {
-                            rating
-                            Text("TES")
-                        }
-                    ).padding(
-                        EdgeInsets(
-                            top: 16,
-                            leading: 16,
-                            bottom: 16,
-                            trailing: 100
-                        )
-                    ).frame(
-                        width: UIScreen.main.bounds.width - 32,
-                        height: .infinity,
-                        alignment: .leading
+                image
+                HStack(
+                    alignment: .firstTextBaseline,
+                    spacing: 8,
+                    content: {
+                        rating
+                        Text("TES")
+                    }
+                ).padding(
+                    EdgeInsets(
+                        top: 4,
+                        leading: 16,
+                        bottom: 16,
+                        trailing: 100
                     )
-                }
+                ).frame(
+                    width: UIScreen.main.bounds.width - 32,
+                    height: .infinity,
+                    alignment: .leading
+                )
             }
         }
     }

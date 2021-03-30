@@ -15,14 +15,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         let profileUseCase = ProfileInjection.init().provideUseCase()
-
         let profilePresenter = ProfilePresenter(useCase: profileUseCase)
         
-        let homeUseCase = MoviesInjection.init().provideMovies()
-        let homePresenter = HomePresenter(useCase: homeUseCase)
+        let moviesUsecase = MoviesInjection.init().provideMovies()
+        let homePresenter = HomePresenter(useCase: moviesUsecase)
+        let favoritePresenter = FavoritePresenter(useCase: moviesUsecase)
         
-        let contentView = ContentView().environmentObject(profilePresenter)
+        let contentView = ContentView()
+            .environmentObject(profilePresenter)
             .environmentObject(homePresenter)
+            .environmentObject(favoritePresenter)
 
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)

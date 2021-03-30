@@ -15,4 +15,5 @@ protocol MoviesLocaleDataSourceProtocol {
     func getRandomMovie() -> AnyPublisher<[MovieEntity], Error>
     func getMovieDetail(id: Int) -> AnyPublisher<[MovieEntity], Error>
     func updateFavoriteMovie(with id: Int) -> AnyPublisher<Bool, Error>
+    func getFavoriteMovies() -> AnyPublisher<[MovieEntity], Error>
 }

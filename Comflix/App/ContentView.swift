@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var profilePresenter: ProfilePresenter
     @EnvironmentObject var homePresenter: HomePresenter
+    @EnvironmentObject var favoritePresenter: FavoritePresenter
     
     var body: some View {
         TabView {
@@ -43,7 +44,7 @@ extension ContentView {
     }
     
     var favoriteView: some View {
-        FavoriteView()
+        FavoriteView(presenter: favoritePresenter)
         .tabItem({
             VStack {
                 Image(
