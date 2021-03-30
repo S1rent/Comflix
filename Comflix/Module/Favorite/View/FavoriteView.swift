@@ -15,23 +15,24 @@ struct FavoriteView: View {
         NavigationView {
             if self.presenter.loadingState {
                 loadingIndicator
-            } else {
+            } else if self.presenter.favoriteMovies != nil && !(self.presenter.favoriteMovies ?? []).isEmpty {
                 ScrollView {
                     VStack {
-                        ForEach(self.presenter.favoriteMovies) { movie in
+                        ForEach(self.presenter.favoriteMovies ?? []) { movie in
                             self.presenter.linkBuilder(with: movie, content: {
                                 FavoriteItemView(movie: movie)
                             })
                         }
                     }
-                }.onAppear {
-                    if self.presenter.favoriteMovies.isEmpty {
-                        self.presenter.getFavoriteMovies()
-                    }
                 }.padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
                 .navigationTitle("Favorite")
+            } else {
+                Text("No Data.")
             }
-        }
+        }.onAppear {
+            self.presenter.getFavoriteMovies()
+        }.padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
+        .navigationTitle("Favorite")
     }
 }
 

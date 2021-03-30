@@ -14,7 +14,7 @@ class FavoritePresenter: ObservableObject {
     private let router = HomeRouter()
     private let useCase: MoviesUseCase
     
-    @Published var favoriteMovies: [MovieModel] = []
+    @Published var favoriteMovies: [MovieModel]?
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
     
