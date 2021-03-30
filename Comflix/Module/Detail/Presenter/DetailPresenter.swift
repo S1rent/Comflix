@@ -89,7 +89,7 @@ class DetailPresenter: ObservableObject {
                 self.success = success
             }
         ).store(in: &cancellables)
-        self.useCase.getMovieDetail(id: movieID)
+        self.useCase.getMovieDetail(id: self.movie?.id ?? 0)
         .receive(on: RunLoop.main)
         .sink(
             receiveCompletion: { completion in
