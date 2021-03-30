@@ -11,7 +11,7 @@ import SwiftUI
 
 class FavoritePresenter: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
-    private let router = HomeRouter()
+    private let router = FavoriteRouter()
     private let useCase: MoviesUseCase
     
     @Published var favoriteMovies: [MovieModel]?
@@ -23,7 +23,7 @@ class FavoritePresenter: ObservableObject {
     }
     
     func getFavoriteMovies() {
-        loadingState = true
+        self.loadingState = true
         self.useCase.getFavoriteMovies()
         .receive(on: RunLoop.main)
         .sink(receiveCompletion: { completion in
@@ -45,8 +45,7 @@ class FavoritePresenter: ObservableObject {
     ) -> some View {
         NavigationLink(
             destination: router.makeDetailView(
-                with: movie,
-                isRandom: false
+                with: movie
             )
         ) {
             content()
