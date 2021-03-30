@@ -12,24 +12,26 @@ struct FavoriteView: View {
     @ObservedObject var presenter: FavoritePresenter
     
     var body: some View {
-        if self.presenter.loadingState {
-            loadingIndicator
-        } else {
-            ScrollView {
-                VStack {
-                    ForEach(self.presenter.favoriteMovies) { movie in
-                        self.presenter.linkBuilder(with: movie, content: {
-                            FavoriteItemView(movie: movie)
-                        })
+        NavigationView {
+            if self.presenter.loadingState {
+                loadingIndicator
+            } else {
+                ScrollView {
+                    VStack {
+                        ForEach(self.presenter.favoriteMovies) { movie in
+                            self.presenter.linkBuilder(with: movie, content: {
+                                FavoriteItemView(movie: movie)
+                            })
+                        }
                     }
-                }
-            }.onAppear {
-                if self.presenter.favoriteMovies.isEmpty {
-                    self.presenter.getFavoriteMovies()
-                }
+                }.onAppear {
+                    if self.presenter.favoriteMovies.isEmpty {
+                        self.presenter.getFavoriteMovies()
+                    }
+                }.padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
+                .navigationTitle("Favorite")
             }
         }
-        
     }
 }
 

@@ -43,7 +43,7 @@ extension FavoriteItemView {
     var header: some View {
         ZStack {
             Color.black.ignoresSafeArea()
-            Text("Name")
+            Text(self.movie.movieTitle)
             .foregroundColor(.white)
             .font(.body)
         }.frame(
@@ -62,7 +62,7 @@ extension FavoriteItemView {
                     spacing: 8,
                     content: {
                         rating
-                        Text("TES")
+                        Text("\(String(format: "%.2f", self.movie.movieRating))")
                     }
                 ).padding(
                     EdgeInsets(
@@ -81,13 +81,18 @@ extension FavoriteItemView {
     }
     
     var image: some View {
-        WebImage(url: URL(string: "https://i.stack.imgur.com/TW2Oy.png"))
+        WebImage(
+            url: URL(
+                    string: "https://image.tmdb.org/t/p/w500/"+(self.movie.movieBackdropURL
+                    )
+                )
+        )
             .resizable()
             .indicator(.activity)
             .transition(.fade)
             .frame(
                 width: UIScreen.main.bounds.width - 32,
-                height: 100,
+                height: 150,
                 alignment: .center
             ).scaledToFill()
     }
