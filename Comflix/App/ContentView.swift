@@ -14,6 +14,7 @@ struct ContentView: View {
     var body: some View {
         TabView {
             homeView
+            favoriteView
             profileView
         }
     }
@@ -39,6 +40,18 @@ extension ContentView {
                 ).foregroundColor(.white)
             }
         }.tag(0)
+    }
+    
+    var favoriteView: some View {
+        FavoriteView()
+        .tabItem({
+            VStack {
+                Image(
+                    systemName: "star"
+                )
+                Text("Favorite")
+            }
+        }).tag(1)
     }
     
     // Profile Page
