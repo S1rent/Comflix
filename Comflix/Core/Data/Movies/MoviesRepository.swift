@@ -113,40 +113,47 @@ extension MoviesRepository: MoviesRepositoryProtocol {
     
     func getRandomMovie() -> AnyPublisher<[MovieModel], Error> {
         
-        return self.remoteDataSource.getRandomMovie()
-            .flatMap { result -> AnyPublisher<[MovieModel], Error> in
-            
-            if result.isEmpty {
-                return self.localeDataSource
-                .getRandomMovie()
-                .map {
-                    MoviesMapper.mapMovieEntitiesToDomains(input: $0)
-                }.eraseToAnyPublisher()
-            } else {
-                return self.remoteDataSource.getRandomMovie()
-                .map {
-                    MoviesMapper.mapMovieResponseToEntities(
-                        input: $0,
-                        displayType: MovieEntityDisplayTypeEnum.randomMovie.rawValue
-                    )
-                }
-                .flatMap {
-                    self.localeDataSource
-                    .addMovies(
-                        with: $0
-                    )
-                }
-                .filter { $0 }
-                .flatMap { _ in self.localeDataSource.getRandomMovie()
-                    .map {
-                        MoviesMapper.mapMovieEntitiesToDomains(
-                            input: $0
-                        )
+        if Reachability.shared.isNetworkAvailable() {
+            return self.remoteDataSource.getRandomMovie()
+                .flatMap { result -> AnyPublisher<[MovieModel], Error> in
+                    if result.isEmpty {
+                        return self.localeDataSource
+                        .getRandomMovie()
+                        .map {
+                            MoviesMapper.mapMovieEntitiesToDomains(input: $0)
+                        }.eraseToAnyPublisher()
+                    } else {
+                        return self.remoteDataSource.getRandomMovie()
+                        .map {
+                            MoviesMapper.mapMovieResponseToEntities(
+                                input: $0,
+                                displayType: MovieEntityDisplayTypeEnum.randomMovie.rawValue
+                            )
+                        }
+                        .flatMap {
+                            self.localeDataSource
+                            .addMovies(
+                                with: $0
+                            )
+                        }
+                        .filter { $0 }
+                        .flatMap { _ in self.localeDataSource.getRandomMovie()
+                            .map {
+                                MoviesMapper.mapMovieEntitiesToDomains(
+                                    input: $0
+                                )
+                            }
+                        }
+                        .eraseToAnyPublisher()
                     }
-                }
-                .eraseToAnyPublisher()
-            }
-        }.eraseToAnyPublisher()
+                }.eraseToAnyPublisher()
+        } else {
+            return self.localeDataSource
+            .getRandomMovie()
+            .map {
+                MoviesMapper.mapMovieEntitiesToDomains(input: $0)
+            }.eraseToAnyPublisher()
+        }
     }
     
     func getMovieDetail(id: Int) -> AnyPublisher<[MovieModel], Error> {
