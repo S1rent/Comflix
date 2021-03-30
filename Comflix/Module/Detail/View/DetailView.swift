@@ -34,7 +34,7 @@ struct DetailView: View {
                                 .all,
                                 16
                             ).onTapGesture {
-                                self.presenter.movie?.isFavorite = 1
+                                self.presenter.updateFavoriteMovie()
                                 self.showPopup = true
                             }
                         } else {
@@ -42,7 +42,7 @@ struct DetailView: View {
                                 .all,
                                 16
                             ).onTapGesture {
-                                self.presenter.movie?.isFavorite = 0
+                                self.presenter.updateFavoriteMovie()
                                 self.showPopup = true
                             }
                         }

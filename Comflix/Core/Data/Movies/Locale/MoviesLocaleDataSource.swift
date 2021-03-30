@@ -149,4 +149,55 @@ extension MoviesLocaleDataSource: MoviesLocaleDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
+    
+    func updateFavoriteMovie(with id: Int) -> AnyPublisher<Bool, Error> {
+        return Future<Bool, Error> { completion in
+            if let realm = self.realm {
+                do {
+                    let favoriteItem = realm.objects(MovieEntity.self)
+                        .filter(
+                            "movieID=\(id)"
+                        )
+                    
+                    if favoriteItem.isEmpty {
+                        completion(
+                            .success(false)
+                        )
+                    } else {
+                        guard let newItem = favoriteItem.first
+                        else {
+                            return completion(
+                                .failure(
+                                    DatabaseErrorEnum.errorRequestFailed
+                                )
+                            )
+                        }
+                        
+                        try realm.write {
+                            newItem.isFavorite = newItem.isFavorite == 0 ? 1 : 0
+                            realm.add(newItem, update: .all)
+                        }
+                        
+                        return completion(
+                            .success(
+                                true
+                            )
+                        )
+                    }
+                } catch {
+                    completion(
+                        .failure(
+                            DatabaseErrorEnum.errorRequestFailed
+                        )
+                    )
+                }
+            } else {
+                completion(
+                    .failure(
+                        DatabaseErrorEnum.errorInvalidInstance
+                    )
+                )
+            }
+        }.eraseToAnyPublisher()
+    }
 }

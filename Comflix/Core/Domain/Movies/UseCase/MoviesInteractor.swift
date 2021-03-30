@@ -33,4 +33,8 @@ class MoviesInteractor: MoviesUseCase {
     func getMovieDetail(id: Int) -> AnyPublisher<[MovieModel], Error> {
         return repository.getMovieDetail(id: id)
     }
+    
+    func updateFavoriteMovie(with id: Int) -> AnyPublisher<Bool, Error> {
+        return repository.updateFavoriteMovie(with: id)
+    }
 }

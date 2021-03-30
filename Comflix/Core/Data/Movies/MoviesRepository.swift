@@ -192,4 +192,8 @@ extension MoviesRepository: MoviesRepositoryProtocol {
             }
         }.eraseToAnyPublisher()
     }
+    
+    func updateFavoriteMovie(with id: Int) -> AnyPublisher<Bool, Error> {
+        return self.localeDataSource.updateFavoriteMovie(with: id).eraseToAnyPublisher()
+    }
 }

@@ -18,6 +18,7 @@ class DetailPresenter: ObservableObject {
     @Published var isRandom: Bool = false
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
+    @Published var success: Bool = false
 
     init(
         useCase: MoviesUseCase,
@@ -65,6 +66,43 @@ class DetailPresenter: ObservableObject {
             },
             receiveValue: { data in
                 self.movie = data.randomElement()
+            }
+        ).store(in: &cancellables)
+    }
+    
+    func updateFavoriteMovie() {
+        loadingState = true
+        self.useCase.updateFavoriteMovie(with: self.movie?.id ?? 0)
+        .receive(on: RunLoop.main)
+        .sink(
+            receiveCompletion: { completion in
+                switch completion {
+                case .failure:
+                    self.errorMessage = String(describing: completion)
+                    self.loadingState = false
+                case .finished:
+                    self.loadingState = false
+                }
+            },
+            receiveValue: { success in
+                self.loadingState = false
+                self.success = success
+            }
+        ).store(in: &cancellables)
+        self.useCase.getMovieDetail(id: movieID)
+        .receive(on: RunLoop.main)
+        .sink(
+            receiveCompletion: { completion in
+                switch completion {
+                case .failure:
+                    self.errorMessage = String(describing: completion)
+                    self.loadingState = false
+                case .finished:
+                    self.loadingState = false
+                }
+            },
+            receiveValue: { data in
+                self.movie = data.first
             }
         ).store(in: &cancellables)
     }
