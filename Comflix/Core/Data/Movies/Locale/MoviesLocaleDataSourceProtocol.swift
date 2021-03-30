@@ -13,4 +13,5 @@ protocol MoviesLocaleDataSourceProtocol {
     func addMovies(with movies: [MovieEntity]) -> AnyPublisher<Bool, Error>
     func getAvailableMovies() -> AnyPublisher<[MovieEntity], Error>
     func getRandomMovie() -> AnyPublisher<[MovieEntity], Error>
+    func getMovieDetail(id: Int) -> AnyPublisher<[MovieEntity], Error>
 }

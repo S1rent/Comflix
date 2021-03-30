@@ -12,4 +12,5 @@ protocol MoviesRepositoryProtocol {
     func getTrendingMovies() -> AnyPublisher<[MovieModel], Error>
     func getAvailableMovies() -> AnyPublisher<[MovieModel], Error>
     func getRandomMovie() -> AnyPublisher<[MovieModel], Error>
+    func getMovieDetail(id: Int) -> AnyPublisher<[MovieModel], Error>
 }

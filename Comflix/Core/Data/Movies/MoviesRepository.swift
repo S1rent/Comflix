@@ -148,4 +148,41 @@ extension MoviesRepository: MoviesRepositoryProtocol {
             }
         }.eraseToAnyPublisher()
     }
+    
+    func getMovieDetail(id: Int) -> AnyPublisher<[MovieModel], Error> {
+        return self.localeDataSource.getMovieDetail(id: id)
+            .flatMap { result -> AnyPublisher<[MovieModel], Error> in
+            if result.isEmpty {
+                return self.remoteDataSource.getMovieDetail(id: id)
+                .map {
+                    MoviesMapper.mapMovieResponseToEntities(
+                        input: $0,
+                        displayType: MovieEntityDisplayTypeEnum.randomMovie.rawValue
+                    )
+                }
+                .flatMap { self.localeDataSource
+                    .addMovies(
+                        with: $0
+                    )
+                }
+                .filter { $0 }
+                    .flatMap { _ in self.localeDataSource.getMovieDetail(id: id)
+                        .map {
+                        MoviesMapper.mapMovieEntitiesToDomains(
+                            input: $0
+                        )
+                    }
+                }
+                .eraseToAnyPublisher()
+            } else {
+                return self.localeDataSource.getMovieDetail(id: id)
+                .map {
+                    MoviesMapper.mapMovieEntitiesToDomains(
+                        input: $0
+                    )
+                }
+                .eraseToAnyPublisher()
+            }
+        }.eraseToAnyPublisher()
+    }
 }

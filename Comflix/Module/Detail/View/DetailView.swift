@@ -9,31 +9,40 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct DetailView: View {
-    var presenter: DetailPresenter
+    @ObservedObject var presenter: DetailPresenter
     
     var body: some View {
-        ScrollView {
-            VStack(
-                alignment: .leading,
-                spacing: 8,
-                content: {
-                    movieImageView
-                    movieTitleView
-                    movieRatingView
-                    SeparatorView()
-                    movieDescriptionView
-                    SeparatorView()
-                    movieReleaseDateView
+        if self.presenter.loadingState {
+            loadingIndicator
+        } else {
+            ScrollView {
+                VStack(
+                    alignment: .leading,
+                    spacing: 8,
+                    content: {
+                        movieImageView
+                        movieTitleView
+                        movieRatingView
+                        SeparatorView()
+                        movieDescriptionView
+                        SeparatorView()
+                        movieReleaseDateView
+                    }
+                )
+            }.onAppear(perform: {
+                if self.presenter.movie == nil {
+                    if self.presenter.isRandom { self.presenter.getRandomMovie()
+                    } else {
+                        self.presenter.getMovieDetail()
+                    }
                 }
+            }).onDisappear(perform: {
+                self.presenter.movie = nil
+            }).navigationBarTitle(
+                "Movie Detail",
+                displayMode: .inline
             )
-        }.onAppear(perform: {
-            if self.presenter.isRandom {
-                self.presenter.getRandomMovie()
-            }
-        }).navigationBarTitle(
-            "Movie Detail",
-            displayMode: .inline
-        )
+        }
     }
 }
 
@@ -41,7 +50,7 @@ extension DetailView {
     var movieImageView: some View {
         WebImage(
             url: URL(
-                string: "https://image.tmdb.org/t/p/w500/"+self.presenter.movie.movieBackdropURL
+                string: "https://image.tmdb.org/t/p/w500/"+(self.presenter.movie?.movieBackdropURL ?? "")
             )
         ).resizable()
         .indicator(
@@ -59,7 +68,7 @@ extension DetailView {
     }
     
     var movieTitleView: some View {
-        Text(self.presenter.movie.movieTitle)
+        Text(self.presenter.movie?.movieTitle ?? "")
             .font(.title)
             .bold()
             .padding(
@@ -83,7 +92,7 @@ extension DetailView {
                 height: 16,
                 alignment: .leading
             )
-            Text("\(String(format: "%.2f", self.presenter.movie.movieRating))")
+            Text("\(String(format: "%.2f", self.presenter.movie?.movieRating ?? 0))")
             .font(.title)
             .bold()
             .padding(.leading, 8)
@@ -98,7 +107,7 @@ extension DetailView {
     }
     
     var movieLabelView: some View {
-        Text(self.presenter.movie.movieTitle)
+        Text(self.presenter.movie?.movieTitle ?? "")
             .font(.title)
             .bold()
             .padding(
@@ -129,7 +138,7 @@ extension DetailView {
                         )
                     )
                     .lineLimit(7)
-                Text(self.presenter.movie.movieDescription)
+                Text(self.presenter.movie?.movieDescription ?? "")
                     .font(
                         .body
                     )
@@ -172,7 +181,7 @@ extension DetailView {
                         height: 16,
                         alignment: .leading
                     )
-                    Text("\(self.presenter.movie.convertedReleaseDate())")
+                    Text("\(self.presenter.movie?.convertedReleaseDate() ?? "")")
                     .font(.body)
                     .bold()
                     .padding(.leading, 8)
@@ -186,5 +195,12 @@ extension DetailView {
                 )
             }
         ).padding(.leading, 8)
+    }
+    
+    var loadingIndicator: some View {
+        VStack {
+            ActivityIndicator()
+            Text("Loading...").bold()
+        }
     }
 }

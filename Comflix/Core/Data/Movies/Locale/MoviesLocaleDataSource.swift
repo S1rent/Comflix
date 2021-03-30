@@ -125,4 +125,28 @@ extension MoviesLocaleDataSource: MoviesLocaleDataSourceProtocol {
             }
         }.eraseToAnyPublisher()
     }
+    
+    func getMovieDetail(id: Int) -> AnyPublisher<[MovieEntity], Error> {
+        return Future<[MovieEntity], Error> { completion in
+            if let realm = self.realm {
+                let movies: Results<MovieEntity> = {
+                    realm.objects(MovieEntity.self)
+                    .filter("movieID=\(id)")
+                }()
+                completion(
+                    .success(
+                        movies.toArray(
+                            ofType: MovieEntity.self
+                        )
+                    )
+                )
+            } else {
+                completion(
+                    .failure(
+                        DatabaseErrorEnum.errorInvalidInstance
+                    )
+                )
+            }
+        }.eraseToAnyPublisher()
+    }
 }

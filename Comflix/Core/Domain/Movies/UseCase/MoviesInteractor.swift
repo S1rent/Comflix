@@ -29,4 +29,8 @@ class MoviesInteractor: MoviesUseCase {
     func getRandomMovie() -> AnyPublisher<[MovieModel], Error> {
         return repository.getRandomMovie()
     }
+    
+    func getMovieDetail(id: Int) -> AnyPublisher<[MovieModel], Error> {
+        return repository.getMovieDetail(id: id)
+    }
 }

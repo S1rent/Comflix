@@ -35,9 +35,8 @@ class ProfilePresenter: ProfilePresenterProtocol, ObservableObject {
                     self.loadingState = false
                 }
             },
-            receiveValue: {
-                data in
-            self.profileModel = data
+            receiveValue: { data in
+                self.profileModel = data
             }
         ).store(in: &cancellables)
     }

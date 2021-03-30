@@ -12,8 +12,8 @@ class HomeRouter {
         let useCase = MoviesInjection.init().provideMovies()
         let presenter = DetailPresenter(
             useCase: useCase,
-            movie: movie,
-            isRandom: isRandom
+            isRandom: isRandom,
+            movieID: movie.id
         )
         return DetailView(presenter: presenter)
     }
