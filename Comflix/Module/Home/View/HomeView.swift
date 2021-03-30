@@ -208,28 +208,40 @@ extension HomeView {
     }
     
     var randomMovieCellView: some View {
-        self.presenter.linkBuilder(with: MovieModel(id: -1, movieTitle: "", moviePosterURL: "", movieBackdropURL: "", movieRating: 0.0, movieReleaseDate: "", movieDescription: ""), content: {
-            VStack {
-                Text("Random Movie")
-                .bold()
-                .font(.title)
-            }
-            .frame(
-                width: UIScreen.main.bounds.width-32,
-                height: 75,
-                alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/
-            )
-            .border(Color.black, width: 1.5)
-            .cornerRadius(6)
-            .overlay(
-                RoundedRectangle(
-                    cornerRadius: 6
-                ).stroke(
-                    Color.black,
-                    lineWidth: 2
+        self.presenter.linkBuilder(
+            with: MovieModel(
+                    id: -1,
+                    movieTitle: "",
+                    moviePosterURL: "",
+                    movieBackdropURL: "",
+                    movieRating: 0.0,
+                    movieReleaseDate: "",
+                    movieDescription: "",
+                    isFavorite: 0
+                ),
+            content: {
+                VStack {
+                    Text("Random Movie")
+                    .bold()
+                    .font(.title)
+                }
+                .frame(
+                    width: UIScreen.main.bounds.width-32,
+                    height: 75,
+                    alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/
                 )
-            )
-        }, isRandom: true).buttonStyle(PlainButtonStyle())
+                .border(Color.black, width: 1.5)
+                .cornerRadius(6)
+                .overlay(
+                    RoundedRectangle(
+                        cornerRadius: 6
+                    ).stroke(
+                        Color.black,
+                        lineWidth: 2
+                    )
+                )
+            }, isRandom: true)
+            .buttonStyle(PlainButtonStyle())
     }
     
     var loadingIndicator: some View {

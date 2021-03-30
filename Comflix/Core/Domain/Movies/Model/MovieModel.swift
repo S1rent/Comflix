@@ -15,6 +15,7 @@ public struct MovieModel: Equatable, Identifiable {
     let movieRating: Double
     let movieReleaseDate: String
     let movieDescription: String
+    var isFavorite: Int
     
     func convertedReleaseDate() -> String {
         let formatter = DateFormatter()

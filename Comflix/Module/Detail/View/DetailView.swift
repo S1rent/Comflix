@@ -10,6 +10,7 @@ import SDWebImageSwiftUI
 
 struct DetailView: View {
     @ObservedObject var presenter: DetailPresenter
+    @State var showPopup = false
     
     var body: some View {
         if self.presenter.loadingState {
@@ -27,6 +28,24 @@ struct DetailView: View {
                         movieDescriptionView
                         SeparatorView()
                         movieReleaseDateView
+                        SeparatorView()
+                        if self.presenter.movie?.isFavorite == 0 {
+                            noFavoriteView.padding(
+                                .all,
+                                16
+                            ).onTapGesture {
+                                self.presenter.movie?.isFavorite = 1
+                                self.showPopup = true
+                            }
+                        } else {
+                            favoriteView.padding(
+                                .all,
+                                16
+                            ).onTapGesture {
+                                self.presenter.movie?.isFavorite = 0
+                                self.showPopup = true
+                            }
+                        }
                     }
                 )
             }.onAppear(perform: {
@@ -38,6 +57,16 @@ struct DetailView: View {
                 }
             }).onDisappear(perform: {
                 self.presenter.movie = nil
+            }).alert(
+                isPresented: $showPopup,
+                content: {
+                Alert(
+                    title: Text("Information"),
+                    message: Text(
+                        "\(self.presenter.movie?.isFavorite == 1 ? "Successfully add to Favorite" : "Successfully remove from Favorite")"
+                    ),
+                    dismissButton: Alert.Button.default(Text("OK")
+                    ))
             }).navigationBarTitle(
                 "Movie Detail",
                 displayMode: .inline
@@ -195,6 +224,42 @@ extension DetailView {
                 )
             }
         ).padding(.leading, 8)
+    }
+    
+    var favoriteView: some View {
+        HStack {
+            Text("Remove from favorite")
+                .foregroundColor(.red)
+                .padding(10)
+        }.frame(width: UIScreen.main.bounds.width - 32)
+        .border(Color.red, width: 1.5)
+        .cornerRadius(6)
+        .overlay(
+            RoundedRectangle(
+                cornerRadius: 6
+            ).stroke(
+                Color.red,
+                lineWidth: 2
+            )
+        )
+    }
+    
+    var noFavoriteView: some View {
+        HStack {
+            Text("Add to favorite")
+                .foregroundColor(.blue)
+                .padding(10)
+        }.frame(width: UIScreen.main.bounds.width - 32)
+        .border(Color.blue, width: 1.5)
+        .cornerRadius(6)
+        .overlay(
+            RoundedRectangle(
+                cornerRadius: 6
+            ).stroke(
+                Color.blue,
+                lineWidth: 2
+            )
+        )
     }
     
     var loadingIndicator: some View {

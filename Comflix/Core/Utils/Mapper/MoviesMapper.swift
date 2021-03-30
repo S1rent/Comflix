@@ -39,7 +39,8 @@ final class MoviesMapper {
                 movieBackdropURL: result.movieBackdropURL,
                 movieRating: result.movieRating,
                 movieReleaseDate: result.movieReleaseDate,
-                movieDescription: result.movieDescription
+                movieDescription: result.movieDescription,
+                isFavorite: result.isFavorite
             )
         }
     }
@@ -56,7 +57,8 @@ final class MoviesMapper {
                 movieBackdropURL: result.movieBackdropURL ?? "",
                 movieRating: result.movieRating ?? 0.0,
                 movieReleaseDate: result.movieReleaseDate ?? "",
-                movieDescription: result.movieDescription ?? ""
+                movieDescription: result.movieDescription ?? "",
+                isFavorite: 0
             )
         }
     }

@@ -15,8 +15,8 @@ struct FavoriteGenreItem: View {
             Text(genre).foregroundColor(.black)
                 .padding(10)
         }.frame(width: UIScreen.main.bounds.width - 32)
+        .border(Color.black, width: 1.5)
         .cornerRadius(6)
-        .border(Color.black, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
         .overlay(
             RoundedRectangle(
                 cornerRadius: 6
