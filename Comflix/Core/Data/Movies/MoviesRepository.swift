@@ -149,7 +149,7 @@ extension MoviesRepository: MoviesRepositoryProtocol {
                 }.eraseToAnyPublisher()
         } else {
             return self.localeDataSource
-            .getRandomMovie()
+            .getTrendingMovies()
             .map {
                 MoviesMapper.mapMovieEntitiesToDomains(input: $0)
             }.eraseToAnyPublisher()
