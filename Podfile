@@ -20,3 +20,8 @@ target 'Movie' do
   project '../Movie/Movie'
   pod 'RealmSwift'
 end
+
+target 'Profile' do
+  project '../Core/Core'
+  project '../Profile/Profile'
+end

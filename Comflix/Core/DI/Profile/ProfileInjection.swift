@@ -6,15 +6,21 @@
 //
 
 import Foundation
+import UIKit
+import Profile
+import Core
 
 final class ProfileInjection: NSObject {
     
-    private func provideRepository() -> ProfileRepositoryProtocol {
-        let dataSource: ProfileDataSource = ProfileDataSource.shared
-        return ProfileRepository.shared(dataSource)
-    }
-    
-    func provideUseCase() -> ProfileUseCase {
-        return ProfileInteractor(repository: provideRepository())
+    func provideProfile<U: UseCaseType>() -> U where U.Request == Any, U.Response == ProfileModel {
+        let dataSource = GetProfileDataSource()
+        let mapper = ProfileTransformer()
+        
+        let repository = GetProfileRepository(
+            localeDataSource: dataSource,
+            mapper: mapper
+        )
+        
+        return Interactor(repository) as! U
     }
 }

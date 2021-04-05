@@ -6,9 +6,20 @@
 //
 
 import SwiftUI
+import Core
+import Profile
 
 struct ContentView: View {
-    @EnvironmentObject var profilePresenter: ProfilePresenter
+    @EnvironmentObject var profilePresenter: GetSinglePresenter<
+            Any,
+        ProfileModel,
+        Interactor<
+            Any,
+            ProfileModel,
+            GetProfileRepository<
+                GetProfileDataSource,
+                ProfileTransformer>
+        >>
     @EnvironmentObject var homePresenter: HomePresenter
     @EnvironmentObject var favoritePresenter: FavoritePresenter
     

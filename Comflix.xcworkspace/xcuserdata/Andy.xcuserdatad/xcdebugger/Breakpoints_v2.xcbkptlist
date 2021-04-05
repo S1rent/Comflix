@@ -84,5 +84,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "596A8DF3-E86C-411C-A7FB-05A599C7896F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Profile/Profile/Data/GetProfileDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "list(request:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "596A8DF3-E86C-411C-A7FB-05A599C7896F - 24c28ae227dd54d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Profile.GetProfileDataSource.list(request: Swift.Optional&lt;Any&gt;) -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;Profile.ProfileEntity&gt;, Swift.Error&gt;"
+                  moduleName = "Profile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Andy/Documents/Philip/IOS/Comflix/Profile/Profile/Data/GetProfileDataSource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  uuid = "596A8DF3-E86C-411C-A7FB-05A599C7896F - c88ec7fc83a55f76"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((Swift.Result&lt;Swift.Array&lt;Profile.ProfileEntity&gt;, Swift.Error&gt;) -&gt; ()) -&gt; () in Profile.GetProfileDataSource.list(request: Swift.Optional&lt;Any&gt;) -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;Profile.ProfileEntity&gt;, Swift.Error&gt;"
+                  moduleName = "Profile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Andy/Documents/Philip/IOS/Comflix/Profile/Profile/Data/GetProfileDataSource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

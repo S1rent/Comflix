@@ -7,6 +7,8 @@
 
 import UIKit
 import SwiftUI
+import Core
+import Profile
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -14,8 +16,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
-        let profileUseCase = ProfileInjection.init().provideUseCase()
-        let profilePresenter = ProfilePresenter(useCase: profileUseCase)
+        let profileInjection = ProfileInjection()
+        
+        let profileUseCase: Interactor<
+            Any,
+            ProfileModel,
+            GetProfileRepository<
+                GetProfileDataSource,
+                ProfileTransformer>
+        > = profileInjection.provideProfile()
+        let profilePresenter = GetSinglePresenter(
+            useCase: profileUseCase
+        )
         
         let moviesUsecase = MoviesInjection.init().provideMovies()
         let homePresenter = HomePresenter(useCase: moviesUsecase)

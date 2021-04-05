@@ -7,13 +7,24 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import Core
+import Profile
 
 struct ProfileView: View {
     
-    @ObservedObject var presenter: ProfilePresenter
+    @ObservedObject var presenter: GetSinglePresenter<
+        Any,
+    ProfileModel,
+    Interactor<
+        Any,
+        ProfileModel,
+        GetProfileRepository<
+            GetProfileDataSource,
+            ProfileTransformer>
+    >>
     
     var body: some View {
-        if presenter.loadingState {
+        if presenter.isLoading {
           VStack {
             Text("Loading...")
             ActivityIndicator()
@@ -33,8 +44,8 @@ struct ProfileView: View {
                 [.leading, .trailing],
                 16
             ).onAppear {
-                if self.presenter.profileModel == nil {
-                    self.presenter.getProfileData()
+                if self.presenter.item == nil {
+                    self.presenter.execute(request: "")
                 }
             }
         }
@@ -45,7 +56,7 @@ extension ProfileView {
     // Header Section
     var profileImage: some View {
         WebImage(
-            url: URL(string: self.presenter.profileModel?.userPhotoURL ?? "")
+            url: URL(string: self.presenter.item?.userPhotoURL ?? "")
         ).resizable()
         .indicator(.activity)
         .transition(.fade(duration: 0.5))
@@ -61,7 +72,7 @@ extension ProfileView {
     
     var profileName: some View {
         Text(
-            self.presenter.profileModel?.userName ?? "-"
+            self.presenter.item?.userName ?? "-"
         ).font(
             .title
         )
@@ -71,7 +82,7 @@ extension ProfileView {
     
     var profileEmail: some View {
         Text(
-            self.presenter.profileModel?.userEmail ?? "-"
+            self.presenter.item?.userEmail ?? "-"
         ).font(
             .body
         ).lineLimit(3)
@@ -88,7 +99,7 @@ extension ProfileView {
     
     var profileFavoriteGenre: some View {
         ForEach(
-            self.presenter.profileModel?.userFavoriteMovieCategory ?? []
+            self.presenter.item?.userFavoriteMovieCategory ?? []
         ) { category in
       ZStack {
           FavoriteGenreItem(genre:  category)
