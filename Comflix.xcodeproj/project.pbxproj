@@ -59,6 +59,8 @@
 		A1D8F7952613404D002CC207 /* FavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8F7942613404D002CC207 /* FavoritePresenter.swift */; };
 		A1D8F79A261343EB002CC207 /* FavoriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8F799261343EB002CC207 /* FavoriteRouter.swift */; };
 		A1F2D811261232F600A8B663 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F2D810261232F600A8B663 /* DetailPresenter.swift */; };
+		A1F3B41F261AF70100031A22 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F3B41B261AF6F400031A22 /* Core.framework */; };
+		A1F3B44B261AF95000031A22 /* Movie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F3B44A261AF95000031A22 /* Movie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +119,8 @@
 		A1D8F7942613404D002CC207 /* FavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePresenter.swift; sourceTree = "<group>"; };
 		A1D8F799261343EB002CC207 /* FavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouter.swift; sourceTree = "<group>"; };
 		A1F2D810261232F600A8B663 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		A1F3B41B261AF6F400031A22 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1F3B44A261AF95000031A22 /* Movie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Movie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75836759C6A9AC793AA04EE /* Pods-Comflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comflix.release.xcconfig"; path = "Target Support Files/Pods-Comflix/Pods-Comflix.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +130,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C345DE2A1563AB0B687C757 /* Pods_Comflix.framework in Frameworks */,
+				A1F3B44B261AF95000031A22 /* Movie.framework in Frameworks */,
+				A1F3B41F261AF70100031A22 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +141,8 @@
 		4645E275BDA799746B335AED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A1F3B44A261AF95000031A22 /* Movie.framework */,
+				A1F3B41B261AF6F400031A22 /* Core.framework */,
 				84E06D7C0881A7BE793F86CA /* Pods_Comflix.framework */,
 			);
 			name = Frameworks;
