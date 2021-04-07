@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "5B38012D-8FCA-40D3-81B6-81D18BA6240D"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FC5D27EE-87C5-4120-B4F7-90CA0E3474D9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Comflix/Core/Data/Profile/Entity/ProfileEntity.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "FC5D27EE-87C5-4120-B4F7-90CA0E3474D9 - 564d0c0a71ae1f16"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Comflix.ProfileEntity.init(userName: Swift.String, userEmail: Swift.String, userPhotoURL: Swift.String, userFavoriteMovieCategory: Swift.Array&lt;Swift.String&gt;) -&gt; Comflix.ProfileEntity"
+                  moduleName = "Comflix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Andy/Documents/Philip/IOS/Comflix/Comflix/Comflix/Core/Data/Profile/Entity/ProfileEntity.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "FC5D27EE-87C5-4120-B4F7-90CA0E3474D9 - f3180ff146404666"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Comflix.ProfileEntity.init() -&gt; Comflix.ProfileEntity"
+                  moduleName = "Comflix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Andy/Documents/Philip/IOS/Comflix/Comflix/Comflix/Core/Data/Profile/Entity/ProfileEntity.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "35">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D06EDA9-E880-4CBF-AD58-28918C8F2B27"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Comflix/Core/Data/Movies/Locale/MoviesLocaleDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "updateFavoriteMovie(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1C66901A-A392-422A-9F2D-15BE662A4A3E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Comflix/Core/Data/Movies/Locale/MoviesLocaleDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "updateFavoriteMovie(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "596A8DF3-E86C-411C-A7FB-05A599C7896F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Profile/Profile/Data/GetProfileDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "list(request:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "596A8DF3-E86C-411C-A7FB-05A599C7896F - 24c28ae227dd54d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Profile.GetProfileDataSource.list(request: Swift.Optional&lt;Any&gt;) -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;Profile.ProfileEntity&gt;, Swift.Error&gt;"
+                  moduleName = "Profile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Andy/Documents/Philip/IOS/Comflix/Profile/Profile/Data/GetProfileDataSource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  uuid = "596A8DF3-E86C-411C-A7FB-05A599C7896F - c88ec7fc83a55f76"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((Swift.Result&lt;Swift.Array&lt;Profile.ProfileEntity&gt;, Swift.Error&gt;) -&gt; ()) -&gt; () in Profile.GetProfileDataSource.list(request: Swift.Optional&lt;Any&gt;) -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;Profile.ProfileEntity&gt;, Swift.Error&gt;"
+                  moduleName = "Profile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Andy/Documents/Philip/IOS/Comflix/Profile/Profile/Data/GetProfileDataSource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

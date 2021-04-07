@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Profile
+
+  Created by IT Division on 07/04/21.
+  
+*/
+"favorite_movie_genre" = "Favorite Movie Genre";
+"action" = "Action";
+"adventure" = "Adventure";
+"anime" = "Anime";
+"cartoon" = "Cartoon";
+"comedy" = "Comedy";
+"fantasy" = "Fantasy";
+"scifi" = "Sci-Fi";
+"profile" = "Profile";

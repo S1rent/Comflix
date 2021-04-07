@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Favorite
+
+  Created by IT Division on 07/04/21.
+  
+*/
+
+"favorite" = "Favorite";
+"nodata" = "No Data.";
+"remove_from_favorite" = "Remove from favorite";
+"success_remove_from_favorite" = "Successfully remove from favorite";
+"add_to_favorite" = "Add to favorite";
+"success_add_to_favorite" = "Successfully add to favorite";
+"information" = "Information";

@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Detail
+
+  Created by IT Division on 07/04/21.
+  
+*/
+
+"movie_detail" = "Movie Detail";
+"overview" = "Overview";
+"release_date" = "Release Date";
