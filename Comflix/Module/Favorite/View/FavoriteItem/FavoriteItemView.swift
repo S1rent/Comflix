@@ -74,7 +74,6 @@ extension FavoriteItemView {
                     )
                 ).frame(
                     width: UIScreen.main.bounds.width - 32,
-                    height: .infinity,
                     alignment: .leading
                 )
             }

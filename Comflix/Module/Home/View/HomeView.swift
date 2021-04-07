@@ -70,7 +70,6 @@ extension HomeView {
                 )
             ).frame(
                 width: UIScreen.main.bounds.width - 32,
-                height: .infinity,
                 alignment: .leading
             )
         }
@@ -204,7 +203,6 @@ extension HomeView {
         .multilineTextAlignment(.leading)
         .frame(
             width: UIScreen.main.bounds.width - 32,
-            height: .infinity,
             alignment: .leading
         )
     }
