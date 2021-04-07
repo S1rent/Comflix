@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import Movie
 
 struct FavoriteItemView: View {
     var movie: MovieModel

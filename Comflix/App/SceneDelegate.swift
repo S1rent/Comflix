@@ -9,6 +9,9 @@ import UIKit
 import SwiftUI
 import Core
 import Profile
+import Home
+import Movie
+import Favorite
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

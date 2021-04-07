@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Favorite
 
 struct FavoriteView: View {
     @ObservedObject var presenter: FavoritePresenter

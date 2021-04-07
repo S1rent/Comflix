@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Movie
+import Home
 
 struct HomeView: View {
     @ObservedObject var presenter: HomePresenter

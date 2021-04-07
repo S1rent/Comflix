@@ -8,6 +8,8 @@
 import SwiftUI
 import Core
 import Profile
+import Home
+import Favorite
 
 struct ContentView: View {
     @EnvironmentObject var profilePresenter: GetSinglePresenter<
