@@ -57,7 +57,7 @@ extension HomeView {
     var greetView: some View {
         Group {
             Text(
-                "Hi there, what are you watching today ?"
+                "label_greet".localized(identifier: "com.comflix.Home")
             ).font(.title)
             .bold()
             .lineLimit(4)
@@ -146,7 +146,7 @@ extension HomeView {
     
     var nowPlayingMoviesTitle: some View {
         Text(
-            "Available Now"
+            "available_now".localized(identifier: "com.comflix.Home")
         ).bold()
         .font(.title)
         .multilineTextAlignment(.leading)
@@ -197,7 +197,7 @@ extension HomeView {
     
     var randomMovieTitle: some View {
         Text(
-            "Don't know what to watch ? we'll pick for you"
+            "label_random_movie".localized(identifier: "com.comflix.Home")
         ).bold()
         .font(.title)
         .multilineTextAlignment(.leading)
@@ -221,7 +221,7 @@ extension HomeView {
                 ),
             content: {
                 VStack {
-                    Text("Random Movie")
+                    Text("random_movie".localized(identifier: "com.comflix.Home"))
                     .bold()
                     .font(.title)
                 }

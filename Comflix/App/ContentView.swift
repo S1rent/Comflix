@@ -50,7 +50,7 @@ extension ContentView {
                     systemName: "house"
                 )
                 Text(
-                    "Home"
+                    "home".localized(identifier: "com.comflix.Home")
                 ).foregroundColor(.white)
             }
         }.tag(0)
