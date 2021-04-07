@@ -30,6 +30,7 @@ struct FavoriteView: View {
                     .navigationTitle("Favorite")
                 } else {
                     Text("No Data.")
+                    .navigationTitle("Favorite")
                 }
             }.onAppear {
                 self.presenter.getFavoriteMovies()
