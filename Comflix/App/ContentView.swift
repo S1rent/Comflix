@@ -77,7 +77,7 @@ extension ContentView {
                     systemName: "person"
                 )
                 Text(
-                    "Profile"
+                    "profile".localized(identifier: "com.comflix.Profile")
                 ).foregroundColor(.white)
             }
         }.tag(2)
