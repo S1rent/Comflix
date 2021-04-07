@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8C345DE2A1563AB0B687C757 /* Pods_Comflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E06D7C0881A7BE793F86CA /* Pods_Comflix.framework */; };
-		A10251ED2610E3E70092C0D7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10251EC2610E3E70092C0D7 /* DetailView.swift */; };
 		A197710E261DBBF600C40582 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A197710D261DBBF600C40582 /* Home.framework */; };
 		A1977236261DC9E200C40582 /* Favorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1977235261DC9E200C40582 /* Favorite.framework */; };
 		A1D2A423260D8B3900D6558E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2A422260D8B3900D6558E /* HomeView.swift */; };
@@ -36,7 +35,6 @@
 /* Begin PBXFileReference section */
 		6AA420F7E1805FEA1B9ACCE9 /* Pods-Comflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comflix.debug.xcconfig"; path = "Target Support Files/Pods-Comflix/Pods-Comflix.debug.xcconfig"; sourceTree = "<group>"; };
 		84E06D7C0881A7BE793F86CA /* Pods_Comflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A10251EC2610E3E70092C0D7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		A197710D261DBBF600C40582 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1977235261DC9E200C40582 /* Favorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Favorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1977291261DFE6D00C40582 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -102,22 +100,6 @@
 				A75836759C6A9AC793AA04EE /* Pods-Comflix.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		A10251E82610E2710092C0D7 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				A10251E92610E2800092C0D7 /* View */,
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
-		A10251E92610E2800092C0D7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				A10251EC2610E3E70092C0D7 /* DetailView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		A1D2A41E260D8AFE00D6558E /* Home */ = {
@@ -205,7 +187,6 @@
 		A1D71A4D260C85C800487486 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				A10251E82610E2710092C0D7 /* Detail */,
 				A1D8F786261336DD002CC207 /* Favorite */,
 				A1D2A41E260D8AFE00D6558E /* Home */,
 				A1D71A51260C895C00487486 /* Profile */,
@@ -453,7 +434,6 @@
 				A1D8F78F261337AA002CC207 /* FavoriteItemView.swift in Sources */,
 				A1D71A54260C89AF00487486 /* ProfileView.swift in Sources */,
 				A1D71AB4260CB3B200487486 /* String+Extension.swift in Sources */,
-				A10251ED2610E3E70092C0D7 /* DetailView.swift in Sources */,
 				A1D71AAF260CB1B600487486 /* FavoriteGenreItem.swift in Sources */,
 				A1D8F78B26133702002CC207 /* FavoriteView.swift in Sources */,
 				A1D71A71260C95C300487486 /* ProfileInjection.swift in Sources */,

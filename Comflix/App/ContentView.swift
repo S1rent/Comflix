@@ -63,7 +63,7 @@ extension ContentView {
                 Image(
                     systemName: "star"
                 )
-                Text("Favorite")
+                Text("favorite".localized(identifier: "com.comflix.Favorite"))
             }
         }).tag(1)
     }

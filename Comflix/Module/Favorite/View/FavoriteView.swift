@@ -27,15 +27,15 @@ struct FavoriteView: View {
                             }
                         }
                     }.padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
-                    .navigationTitle("Favorite")
+                    .navigationTitle("favorite".localized(identifier: "com.comflix.Favorite"))
                 } else {
-                    Text("No Data.")
-                    .navigationTitle("Favorite")
+                    Text("nodata".localized(identifier: "com.comflix.Favorite"))
+                        .navigationTitle("favorite".localized(identifier: "com.comflix.Favorite"))
                 }
             }.onAppear {
                 self.presenter.getFavoriteMovies()
             }
-        }.navigationTitle("Favorite")
+        }.navigationTitle("favorite".localized(identifier: "com.comflix.Favorite"))
     }
 }
 
