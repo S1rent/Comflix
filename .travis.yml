@@ -1,0 +1,13 @@
+before_install:
+  - gem install cocoapods
+install:
+  - brew update && brew upgrade swiftlint
+  - pod install
+language: swift
+osx_image: xcode12.1
+xcode_workspace: Comflix.xcworkspace
+xcode_scheme: Comflix
+xcode_destination: platform=iOS Simulator,OS=14.0,name=iPhone 11 Pro
+script:
+ - swiftlint
+ - xcodebuild -workspace 'Comflix.xcworkspace' -scheme 'Comflix' -destination 'platform=iOS Simulator,OS=14.0,name=iPhone 11 Pro'
