@@ -7,16 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		193A6B82ED3C179AF6DA8230 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB354ADB775679BAB42F93F4 /* Pods_Core.framework */; };
+		3C62CBF28575240C2131098D /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E56357B52F3C05AED65701 /* Pods_Core.framework */; };
 		A1F3B400261AF62400031A22 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = A1F3B3FE261AF62400031A22 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1F3B425261AF88400031A22 /* UseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F3B424261AF88400031A22 /* UseCaseType.swift */; };
 		A1F3B45A261AFAC300031A22 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F3B459261AFAC300031A22 /* DataSource.swift */; };
 		A1F3B460261AFAE100031A22 /* LocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F3B45F261AFAE100031A22 /* LocaleDataSource.swift */; };
 		A1F3B464261AFB0600031A22 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F3B463261AFB0600031A22 /* Repository.swift */; };
-		A1F3B468261AFB1D00031A22 /* MovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F3B467261AFB1D00031A22 /* MovieEntity.swift */; };
 		A1F3B484261AFE5100031A22 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F3B483261AFE5100031A22 /* Interactor.swift */; };
 		A1F3B489261AFF0E00031A22 /* Error+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F3B488261AFF0E00031A22 /* Error+Extension.swift */; };
-		A1F3B48D261B1A5000031A22 /* Result+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F3B48C261B1A5000031A22 /* Result+Extension.swift */; };
 		A1F3B491261B1A9800031A22 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F3B490261B1A9800031A22 /* Mapper.swift */; };
 		A1F3B496261B1AC300031A22 /* GetListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F3B495261B1AC300031A22 /* GetListPresenter.swift */; };
 		A1F3B49A261B1AF700031A22 /* GetSinglePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F3B499261B1AF700031A22 /* GetSinglePresenter.swift */; };
@@ -25,7 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		36882A9F441BE11D9A35B9D3 /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
+		2651F05A599358DA3D1AE5A1 /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "../../Comflix/Pods/Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
+		70E56357B52F3C05AED65701 /* Pods_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F3B3FB261AF62400031A22 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F3B3FE261AF62400031A22 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		A1F3B3FF261AF62400031A22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,17 +32,14 @@
 		A1F3B459261AFAC300031A22 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		A1F3B45F261AFAE100031A22 /* LocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleDataSource.swift; sourceTree = "<group>"; };
 		A1F3B463261AFB0600031A22 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		A1F3B467261AFB1D00031A22 /* MovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEntity.swift; sourceTree = "<group>"; };
 		A1F3B483261AFE5100031A22 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		A1F3B488261AFF0E00031A22 /* Error+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extension.swift"; sourceTree = "<group>"; };
-		A1F3B48C261B1A5000031A22 /* Result+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extension.swift"; sourceTree = "<group>"; };
 		A1F3B490261B1A9800031A22 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		A1F3B495261B1AC300031A22 /* GetListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetListPresenter.swift; sourceTree = "<group>"; };
 		A1F3B499261B1AF700031A22 /* GetSinglePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSinglePresenter.swift; sourceTree = "<group>"; };
 		A1F3B49E261B1B1D00031A22 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A1F3B4A9261B1F3B00031A22 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
-		AF9BF1105805F357CF6B4FD0 /* Pods-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.release.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.release.xcconfig"; sourceTree = "<group>"; };
-		EB354ADB775679BAB42F93F4 /* Pods_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE2DFEF76DC5588DB1762900 /* Pods-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.release.xcconfig"; path = "../../Comflix/Pods/Target Support Files/Pods-Core/Pods-Core.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,20 +47,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				193A6B82ED3C179AF6DA8230 /* Pods_Core.framework in Frameworks */,
+				3C62CBF28575240C2131098D /* Pods_Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78725E0C0524DC72F418DD96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2651F05A599358DA3D1AE5A1 /* Pods-Core.debug.xcconfig */,
+				BE2DFEF76DC5588DB1762900 /* Pods-Core.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A1F3B3F1261AF62400031A22 = {
 			isa = PBXGroup;
 			children = (
 				A1F3B3FD261AF62400031A22 /* Core */,
 				A1F3B3FC261AF62400031A22 /* Products */,
-				C49FB6C847E9A13CD66A73D4 /* Pods */,
-				AC874115F6A725E173B2AF48 /* Frameworks */,
+				78725E0C0524DC72F418DD96 /* Pods */,
+				D6608D53485927ADB0652829 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,20 +116,11 @@
 		A1F3B458261AFAB100031A22 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				A1F3B45D261AFACF00031A22 /* Entity */,
 				A1F3B45E261AFAD600031A22 /* Repository */,
 				A1F3B459261AFAC300031A22 /* DataSource.swift */,
 				A1F3B45F261AFAE100031A22 /* LocaleDataSource.swift */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		A1F3B45D261AFACF00031A22 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				A1F3B467261AFB1D00031A22 /* MovieEntity.swift */,
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 		A1F3B45E261AFAD600031A22 /* Repository */ = {
@@ -147,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				A1F3B488261AFF0E00031A22 /* Error+Extension.swift */,
-				A1F3B48C261B1A5000031A22 /* Result+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -178,22 +173,12 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		AC874115F6A725E173B2AF48 /* Frameworks */ = {
+		D6608D53485927ADB0652829 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EB354ADB775679BAB42F93F4 /* Pods_Core.framework */,
+				70E56357B52F3C05AED65701 /* Pods_Core.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C49FB6C847E9A13CD66A73D4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				36882A9F441BE11D9A35B9D3 /* Pods-Core.debug.xcconfig */,
-				AF9BF1105805F357CF6B4FD0 /* Pods-Core.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../Comflix/Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,7 +199,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1F3B403261AF62400031A22 /* Build configuration list for PBXNativeTarget "Core" */;
 			buildPhases = (
-				97D0C20E55A64A60761CFDB3 /* [CP] Check Pods Manifest.lock */,
+				4A86670F8F58347511A1C175 /* [CP] Check Pods Manifest.lock */,
 				A1F3B3F6261AF62400031A22 /* Headers */,
 				A1F3B3F7261AF62400031A22 /* Sources */,
 				A1F3B3F8261AF62400031A22 /* Frameworks */,
@@ -272,7 +257,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		97D0C20E55A64A60761CFDB3 /* [CP] Check Pods Manifest.lock */ = {
+		4A86670F8F58347511A1C175 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -301,12 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1F3B48D261B1A5000031A22 /* Result+Extension.swift in Sources */,
 				A1F3B484261AFE5100031A22 /* Interactor.swift in Sources */,
 				A1F3B49A261B1AF700031A22 /* GetSinglePresenter.swift in Sources */,
 				A1F3B460261AFAE100031A22 /* LocaleDataSource.swift in Sources */,
 				A1F3B49F261B1B1D00031A22 /* Router.swift in Sources */,
-				A1F3B468261AFB1D00031A22 /* MovieEntity.swift in Sources */,
 				A1F3B491261B1A9800031A22 /* Mapper.swift in Sources */,
 				A1F3B489261AFF0E00031A22 /* Error+Extension.swift in Sources */,
 				A1F3B45A261AFAC300031A22 /* DataSource.swift in Sources */,
@@ -444,7 +427,7 @@
 		};
 		A1F3B404261AF62400031A22 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36882A9F441BE11D9A35B9D3 /* Pods-Core.debug.xcconfig */;
+			baseConfigurationReference = 2651F05A599358DA3D1AE5A1 /* Pods-Core.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -471,7 +454,7 @@
 		};
 		A1F3B405261AF62400031A22 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF9BF1105805F357CF6B4FD0 /* Pods-Core.release.xcconfig */;
+			baseConfigurationReference = BE2DFEF76DC5588DB1762900 /* Pods-Core.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

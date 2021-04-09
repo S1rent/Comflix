@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A11F1176261FF04200CF3968 /* Results+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F1175261FF04200CF3968 /* Results+Extension.swift */; };
 		A197703D261DA3B600C40582 /* MovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A197703C261DA3B600C40582 /* MovieEntity.swift */; };
 		A197703F261DA41800C40582 /* MoviesLocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A197703E261DA41800C40582 /* MoviesLocaleDataSource.swift */; };
 		A1977044261DA63C00C40582 /* MoviesRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1977043261DA63C00C40582 /* MoviesRemoteDataSource.swift */; };
@@ -22,28 +23,13 @@
 		A19770DB261DB75E00C40582 /* MoviesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19770DA261DB75E00C40582 /* MoviesInteractor.swift */; };
 		A197719C261DC49700C40582 /* MoviesInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A197719B261DC49700C40582 /* MoviesInjection.swift */; };
 		A1F3B437261AF8FD00031A22 /* Movie.h in Headers */ = {isa = PBXBuildFile; fileRef = A1F3B435261AF8FD00031A22 /* Movie.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A1F3B4C6261B227200031A22 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F3B4C5261B227200031A22 /* Core.framework */; };
-		A1F3B4C7261B227200031A22 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A1F3B4C5261B227200031A22 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF3798B134C4942487D32A3D /* Pods_Movie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9D9B8C535400FF5811AA81 /* Pods_Movie.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A1F3B4C8261B227300031A22 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A1F3B4C7261B227200031A22 /* Core.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		24869A01AB01EEEFA85F3BE3 /* Pods-Movie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie.release.xcconfig"; path = "Target Support Files/Pods-Movie/Pods-Movie.release.xcconfig"; sourceTree = "<group>"; };
 		4A9D9B8C535400FF5811AA81 /* Pods_Movie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A11F1175261FF04200CF3968 /* Results+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Results+Extension.swift"; sourceTree = "<group>"; };
 		A197703C261DA3B600C40582 /* MovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEntity.swift; sourceTree = "<group>"; };
 		A197703E261DA41800C40582 /* MoviesLocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesLocaleDataSource.swift; sourceTree = "<group>"; };
 		A1977043261DA63C00C40582 /* MoviesRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRemoteDataSource.swift; sourceTree = "<group>"; };
@@ -72,7 +58,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF3798B134C4942487D32A3D /* Pods_Movie.framework in Frameworks */,
-				A1F3B4C6261B227200031A22 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +82,14 @@
 				4A9D9B8C535400FF5811AA81 /* Pods_Movie.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A11F1174261FF03100CF3968 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A11F1175261FF04200CF3968 /* Results+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A1977038261DA39B00C40582 /* Data */ = {
@@ -172,13 +165,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		A19770D4261DB6FD00C40582 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
 		A19770D5261DB72200C40582 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,7 +207,7 @@
 				A1977038261DA39B00C40582 /* Data */,
 				A197719A261DC48B00C40582 /* DI */,
 				A1977099261DA97700C40582 /* Domain */,
-				A19770D4261DB6FD00C40582 /* Presenter */,
+				A11F1174261FF03100CF3968 /* Extensions */,
 				A1F3B435261AF8FD00031A22 /* Movie.h */,
 				A1F3B436261AF8FD00031A22 /* Info.plist */,
 			);
@@ -251,7 +237,6 @@
 				A1F3B42E261AF8FD00031A22 /* Sources */,
 				A1F3B42F261AF8FD00031A22 /* Frameworks */,
 				A1F3B430261AF8FD00031A22 /* Resources */,
-				A1F3B4C8261B227300031A22 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -338,6 +323,7 @@
 				A19770AF261DB42F00C40582 /* MoviesMapper.swift in Sources */,
 				A19770D0261DB62500C40582 /* MoviesRemoteDataSourceProtocol.swift in Sources */,
 				A197709C261DA99000C40582 /* MovieModel.swift in Sources */,
+				A11F1176261FF04200CF3968 /* Results+Extension.swift in Sources */,
 				A197719C261DC49700C40582 /* MoviesInjection.swift in Sources */,
 				A19770CE261DB58900C40582 /* MoviesLocaleDataSourceProtocol.swift in Sources */,
 				A1977044261DA63C00C40582 /* MoviesRemoteDataSource.swift in Sources */,
