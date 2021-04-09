@@ -1,6 +1,7 @@
 before_install:
   - gem install cocoapods
 install:
+  - cd Comflix
   - brew update && brew upgrade swiftlint
   - pod install
 language: swift
