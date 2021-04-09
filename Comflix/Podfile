@@ -1,5 +1,6 @@
 platform :ios, '14.0'
 source 'https://github.com/S1rent/Dicoding-CorePodSpecs'
+source 'https://github.com/CocoaPods/Specs.git'
  
 use_frameworks!
 workspace 'Comflix'
