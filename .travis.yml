@@ -3,7 +3,7 @@ before_install:
 install:
   - cd Comflix
   - brew update && brew upgrade swiftlint
-  - pod install
+  - pod install --repo-update
 language: swift
 osx_image: xcode12.1
 xcode_workspace: Comflix.xcworkspace
