@@ -2,10 +2,10 @@ before_install:
   - gem install cocoapods
   - pod repo update
 install:
-  - cd Comflix
   - brew update && brew upgrade swiftlint
+  - cd Comflix
   - pod setup
-  - pod install
+  - pod install --verbose
 language: swift
 osx_image: xcode12.1
 xcode_workspace: Comflix.xcworkspace
