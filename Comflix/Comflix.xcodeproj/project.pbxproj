@@ -27,7 +27,6 @@
 		A1D8F78B26133702002CC207 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8F78A26133702002CC207 /* FavoriteView.swift */; };
 		A1D8F78F261337AA002CC207 /* FavoriteItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8F78E261337AA002CC207 /* FavoriteItemView.swift */; };
 		A1D8F792261339C1002CC207 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8F791261339C1002CC207 /* RoundedCorner.swift */; };
-		A1F3B41F261AF70100031A22 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F3B41B261AF6F400031A22 /* Core.framework */; };
 		A1F3B44B261AF95000031A22 /* Movie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F3B44A261AF95000031A22 /* Movie.framework */; };
 		A1F3B51A261B60C900031A22 /* Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F3B519261B60C900031A22 /* Profile.framework */; };
 /* End PBXBuildFile section */
@@ -73,7 +72,6 @@
 				A1F3B44B261AF95000031A22 /* Movie.framework in Frameworks */,
 				A1F3B51A261B60C900031A22 /* Profile.framework in Frameworks */,
 				A197710E261DBBF600C40582 /* Home.framework in Frameworks */,
-				A1F3B41F261AF70100031A22 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +593,31 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"Realm\"",
+					"-framework",
+					"\"RealmSwift\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"SDWebImageSwiftUI\"",
+					"-framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Combine\"",
+					"-weak_framework",
+					"\"SwiftUI\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Comflix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -616,6 +639,31 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"Realm\"",
+					"-framework",
+					"\"RealmSwift\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"SDWebImageSwiftUI\"",
+					"-framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Combine\"",
+					"-weak_framework",
+					"\"SwiftUI\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Comflix;
 				PRODUCT_NAME = "$(TARGET_NAME)";

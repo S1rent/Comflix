@@ -10,8 +10,6 @@
 		A1977293261DFE9400C40582 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1977295261DFE9400C40582 /* Localizable.strings */; };
 		A1977299261DFFC000C40582 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1977298261DFFC000C40582 /* String+Extension.swift */; };
 		A1F3B504261B602A00031A22 /* Profile.h in Headers */ = {isa = PBXBuildFile; fileRef = A1F3B502261B602A00031A22 /* Profile.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A1F3B51E261B60DB00031A22 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F3B51D261B60DB00031A22 /* Core.framework */; };
-		A1F3B51F261B60DB00031A22 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A1F3B51D261B60DB00031A22 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A1F3B526261B619900031A22 /* ProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F3B525261B619900031A22 /* ProfileEntity.swift */; };
 		A1F3B529261B61E600031A22 /* GetProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F3B528261B61E600031A22 /* GetProfileDataSource.swift */; };
 		A1F3B52B261B62EA00031A22 /* GetProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F3B52A261B62EA00031A22 /* GetProfileRepository.swift */; };
@@ -19,20 +17,6 @@
 		A1F3B531261B63B600031A22 /* ProfileTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F3B530261B63B600031A22 /* ProfileTransformer.swift */; };
 		E0F2EAEAC58FDA132CBBF5F6 /* Pods_Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFB6D8AADE2AD36700D25E7 /* Pods_Profile.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A1F3B520261B60DB00031A22 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A1F3B51F261B60DB00031A22 /* Core.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2A67234E1AB092F3701FEDD3 /* Pods-Profile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Profile.release.xcconfig"; path = "Target Support Files/Pods-Profile/Pods-Profile.release.xcconfig"; sourceTree = "<group>"; };
@@ -58,7 +42,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0F2EAEAC58FDA132CBBF5F6 /* Pods_Profile.framework in Frameworks */,
-				A1F3B51E261B60DB00031A22 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +172,6 @@
 				A1F3B4FB261B602A00031A22 /* Sources */,
 				A1F3B4FC261B602A00031A22 /* Frameworks */,
 				A1F3B4FD261B602A00031A22 /* Resources */,
-				A1F3B520261B60DB00031A22 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

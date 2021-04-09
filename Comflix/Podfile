@@ -1,4 +1,5 @@
 platform :ios, '14.0'
+source 'https://github.com/S1rent/Dicoding-CorePodSpecs'
  
 use_frameworks!
 workspace 'Comflix'
@@ -8,23 +9,20 @@ target 'Comflix' do
   pod 'SwiftLint'
   pod 'SDWebImageSwiftUI'
   pod 'RealmSwift'
-end
- 
-target 'Core' do
-  project '../Core/Core'
-  pod 'RealmSwift'
+  pod 'Core'
 end
 
 target 'Movie' do
-  project '../Core/Core'
+  pod 'Core'
   project '../Movie/Movie'
   pod 'RealmSwift'
   pod 'Alamofire'
 end
 
 target 'Profile' do
-  project '../Core/Core'
+  pod 'Core'
   project '../Profile/Profile'
+  pod 'RealmSwift'
 end
 
 target 'Home' do
