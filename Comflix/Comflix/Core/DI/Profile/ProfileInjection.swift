@@ -21,6 +21,7 @@ final class ProfileInjection: NSObject {
             mapper: mapper
         )
         
+        
         return Interactor(repository) as! U
     }
 }
