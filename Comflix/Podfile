@@ -43,3 +43,7 @@ target 'Favorite' do
   project '../Favorite/Favorite'
   pod 'SDWebImageSwiftUI'
 end
+
+target 'Common' do
+  project '../Common/Common'
+end

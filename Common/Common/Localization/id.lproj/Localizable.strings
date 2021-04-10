@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  Common
+
+  Created by IT Division on 10/04/21.
+  
+*/
+"movie_detail" = "Detail Film";
+"overview" = "Gambaran Film";
+"release_date" = "Tanggal Rilis";
+"favorite" = "Favorit";
+"nodata" = "Tidak ada data.";
+"remove_from_favorite" = "Hapus dari daftar favorit";
+"success_remove_from_favorite" = "Berhasil menghapus dari daftar favorit";
+"add_to_favorite" = "Tambah ke favorit";
+"success_add_to_favorite" = "Berhasil menambah ke daftar favorit";
+"information" = "Informasi";
+"favorite_movie_genre" = "Genre Film Favorit";
+"action" = "Aksi";
+"adventure" = "Petualangan";
+"anime" = "Anime";
+"cartoon" = "Kartun";
+"comedy" = "Komedi";
+"fantasy" = "Fantasi";
+"scifi" = "Sci-Fi";
+"profile" = "Profil";
+"random_movie" = "Film Secara Acak";
+"label_random_movie" = "Tidak tahu ingin nonton apa ? kami pilihkan untuk anda";
+"home" = "Beranda";
+"label_greet" = "Halo, apa yang akan anda tonton hari ini ?";
+"available_now" = "Tersedia Saat Ini";

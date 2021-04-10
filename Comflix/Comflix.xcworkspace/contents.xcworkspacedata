@@ -22,4 +22,7 @@
    <FileRef
       location = "group:../Favorite/Favorite.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:../Common/Common.xcodeproj">
+   </FileRef>
 </Workspace>

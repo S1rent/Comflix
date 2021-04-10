@@ -65,14 +65,14 @@ public struct DetailView: View {
                 isPresented: $showPopup,
                 content: {
                 Alert(
-                    title: Text("information".localized(identifier: "com.comflix.Favorite")),
+                    title: Text("information".localized(identifier: "com.comflix.Common")),
                     message: Text(
-                        "\(self.presenter.movie?.isFavorite == 1 ? "success_add_to_favorite".localized(identifier: "com.comflix.Favorite") : "success_remove_from_favorite".localized(identifier: "com.comflix.Favorite"))"
+                        "\(self.presenter.movie?.isFavorite == 1 ? "success_add_to_favorite".localized(identifier: "com.comflix.Common") : "success_remove_from_favorite".localized(identifier: "com.comflix.Common"))"
                     ),
                     dismissButton: Alert.Button.default(Text("OK")
                     ))
             }).navigationBarTitle(
-                "movie_detail".localized(identifier: "com.comflix.Detail"),
+                "movie_detail".localized(identifier: "com.comflix.Common"),
                 displayMode: .inline
             )
         }
@@ -95,7 +95,7 @@ extension DetailView {
             )
         ).frame(
             width: UIScreen.main.bounds.width,
-            height: 175,
+            height: 250,
             alignment: .center
         ).scaledToFill()
     }
@@ -159,7 +159,7 @@ extension DetailView {
             alignment: .leading,
             spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/,
             content: {
-                Text("overview".localized(identifier: "com.comflix.Detail"))
+                Text("overview".localized(identifier: "com.comflix.Common"))
                     .font(.title)
                     .bold()
                     .padding(
@@ -194,7 +194,7 @@ extension DetailView {
             alignment: .leading,
             spacing: 8,
             content: {
-                Text("release_date".localized(identifier: "com.comflix.Detail"))
+                Text("release_date".localized(identifier: "com.comflix.Common"))
                     .font(.title)
                     .bold()
                     .padding(
@@ -232,7 +232,7 @@ extension DetailView {
     
     var favoriteView: some View {
         HStack {
-            Text("remove_from_favorite".localized(identifier: "com.comflix.Favorite"))
+            Text("remove_from_favorite".localized(identifier: "com.comflix.Common"))
                 .foregroundColor(.red)
                 .padding(10)
         }.frame(width: UIScreen.main.bounds.width - 32)
@@ -250,7 +250,7 @@ extension DetailView {
     
     var noFavoriteView: some View {
         HStack {
-            Text("add_to_favorite".localized(identifier: "com.comflix.Favorite"))
+            Text("add_to_favorite".localized(identifier: "com.comflix.Common"))
                 .foregroundColor(.blue)
                 .padding(10)
         }.frame(width: UIScreen.main.bounds.width - 32)

@@ -15,7 +15,6 @@
 		A19771AC261DC50C00C40582 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19771AB261DC50C00C40582 /* HomeRouter.swift */; };
 		A19771FC261DC64800C40582 /* Detail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19771FB261DC64800C40582 /* Detail.framework */; };
 		A19771FD261DC64800C40582 /* Detail.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A19771FB261DC64800C40582 /* Detail.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A19772A9261E065D00C40582 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A19772AB261E065D00C40582 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,8 +43,6 @@
 		A1977150261DBF6C00C40582 /* Movie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Movie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19771AB261DC50C00C40582 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		A19771FB261DC64800C40582 /* Detail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Detail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A19772AA261E065D00C40582 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A19772AC261E066000C40582 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +80,6 @@
 		A19770EA261DBBA900C40582 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				A19772A6261E063D00C40582 /* Localization */,
 				A1977112261DBC0900C40582 /* Presenter */,
 				A19771AA261DC50300C40582 /* Router */,
 				A19770EB261DBBA900C40582 /* Home.h */,
@@ -106,14 +102,6 @@
 				A19771AB261DC50C00C40582 /* HomeRouter.swift */,
 			);
 			path = Router;
-			sourceTree = "<group>";
-		};
-		A19772A6261E063D00C40582 /* Localization */ = {
-			isa = PBXGroup;
-			children = (
-				A19772AB261E065D00C40582 /* Localizable.strings */,
-			);
-			path = Localization;
 			sourceTree = "<group>";
 		};
 		A39199856C4BC952C2EEF65B /* Frameworks */ = {
@@ -208,7 +196,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A19772A9261E065D00C40582 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,18 +237,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		A19772AB261E065D00C40582 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A19772AA261E065D00C40582 /* id */,
-				A19772AC261E066000C40582 /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A19770EE261DBBA900C40582 /* Debug */ = {

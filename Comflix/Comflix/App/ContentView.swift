@@ -50,7 +50,7 @@ extension ContentView {
                     systemName: "house"
                 )
                 Text(
-                    "home".localized(identifier: "com.comflix.Home")
+                    "home".localized(identifier: "com.comflix.Common")
                 ).foregroundColor(.white)
             }
         }.tag(0)
@@ -63,7 +63,7 @@ extension ContentView {
                 Image(
                     systemName: "star"
                 )
-                Text("favorite".localized(identifier: "com.comflix.Favorite"))
+                Text("favorite".localized(identifier: "com.comflix.Common"))
             }
         }).tag(1)
     }
@@ -77,7 +77,7 @@ extension ContentView {
                     systemName: "person"
                 )
                 Text(
-                    "profile".localized(identifier: "com.comflix.Profile")
+                    "profile".localized(identifier: "com.comflix.Common")
                 ).foregroundColor(.white)
             }
         }.tag(2)

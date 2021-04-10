@@ -91,7 +91,7 @@ extension ProfileView {
     // Favorite Genre Section
     var labelFavoriteGenre: some View {
         Text(
-            "favorite_movie_genre".localized(identifier: "com.comflix.Profile")
+            "favorite_movie_genre".localized(identifier: "com.comflix.Common")
         ).bold()
         .font(.title)
         .lineLimit(3)

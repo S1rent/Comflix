@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8C345DE2A1563AB0B687C757 /* Pods_Comflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E06D7C0881A7BE793F86CA /* Pods_Comflix.framework */; };
+		A11F13932621F88C00CF3968 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11F13922621F88C00CF3968 /* Common.framework */; };
+		A11F13942621F88C00CF3968 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A11F13922621F88C00CF3968 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A197710E261DBBF600C40582 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A197710D261DBBF600C40582 /* Home.framework */; };
 		A1977236261DC9E200C40582 /* Favorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1977235261DC9E200C40582 /* Favorite.framework */; };
 		A1D2A423260D8B3900D6558E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2A422260D8B3900D6558E /* HomeView.swift */; };
@@ -31,9 +33,24 @@
 		A1F3B51A261B60C900031A22 /* Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F3B519261B60C900031A22 /* Profile.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A11F13952621F88C00CF3968 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A11F13942621F88C00CF3968 /* Common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6AA420F7E1805FEA1B9ACCE9 /* Pods-Comflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Comflix.debug.xcconfig"; path = "Target Support Files/Pods-Comflix/Pods-Comflix.debug.xcconfig"; sourceTree = "<group>"; };
 		84E06D7C0881A7BE793F86CA /* Pods_Comflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Comflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A11F13922621F88C00CF3968 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A197710D261DBBF600C40582 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1977235261DC9E200C40582 /* Favorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Favorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1977291261DFE6D00C40582 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -70,6 +87,7 @@
 				A1977236261DC9E200C40582 /* Favorite.framework in Frameworks */,
 				8C345DE2A1563AB0B687C757 /* Pods_Comflix.framework in Frameworks */,
 				A1F3B44B261AF95000031A22 /* Movie.framework in Frameworks */,
+				A11F13932621F88C00CF3968 /* Common.framework in Frameworks */,
 				A1F3B51A261B60C900031A22 /* Profile.framework in Frameworks */,
 				A197710E261DBBF600C40582 /* Home.framework in Frameworks */,
 			);
@@ -81,6 +99,7 @@
 		4645E275BDA799746B335AED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A11F13922621F88C00CF3968 /* Common.framework */,
 				A1977235261DC9E200C40582 /* Favorite.framework */,
 				A197710D261DBBF600C40582 /* Home.framework */,
 				A1F3B519261B60C900031A22 /* Profile.framework */,
@@ -308,6 +327,7 @@
 				A1D71A05260C800500487486 /* Frameworks */,
 				A1D71A06260C800500487486 /* Resources */,
 				7A5CCABB780F36DBD8C19DB1 /* [CP] Embed Pods Frameworks */,
+				A11F13952621F88C00CF3968 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

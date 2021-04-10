@@ -9,7 +9,7 @@ import Foundation
 
 extension String {
     var localized: String {
-        let bundle = Bundle(identifier: "com.comflix.Profile") ?? .main
+        let bundle = Bundle(identifier: "com.comflix.Common") ?? .main
         return bundle.localizedString(forKey: self, value: nil, table: nil)
     }
 }

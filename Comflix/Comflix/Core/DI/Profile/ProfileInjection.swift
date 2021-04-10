@@ -21,6 +21,10 @@ final class ProfileInjection: NSObject {
             mapper: mapper
         )
         
-        return Interactor(repository) as! U
+        guard let interactor = Interactor(repository) as? U else {
+            fatalError()
+        }
+        
+        return interactor
     }
 }

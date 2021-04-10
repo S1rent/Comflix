@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1977293261DFE9400C40582 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1977295261DFE9400C40582 /* Localizable.strings */; };
 		A1977299261DFFC000C40582 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1977298261DFFC000C40582 /* String+Extension.swift */; };
 		A1F3B504261B602A00031A22 /* Profile.h in Headers */ = {isa = PBXBuildFile; fileRef = A1F3B502261B602A00031A22 /* Profile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1F3B526261B619900031A22 /* ProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F3B525261B619900031A22 /* ProfileEntity.swift */; };
@@ -22,8 +21,6 @@
 		2A67234E1AB092F3701FEDD3 /* Pods-Profile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Profile.release.xcconfig"; path = "Target Support Files/Pods-Profile/Pods-Profile.release.xcconfig"; sourceTree = "<group>"; };
 		2FFB6D8AADE2AD36700D25E7 /* Pods_Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		844B0DF53DA91F4837033FF4 /* Pods-Profile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Profile.debug.xcconfig"; path = "Target Support Files/Pods-Profile/Pods-Profile.debug.xcconfig"; sourceTree = "<group>"; };
-		A1977294261DFE9400C40582 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A1977296261DFE9A00C40582 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A1977298261DFFC000C40582 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		A1F3B4FF261B602A00031A22 /* Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F3B502261B602A00031A22 /* Profile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
@@ -57,14 +54,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A1977287261DFC5500C40582 /* Localization */ = {
-			isa = PBXGroup;
-			children = (
-				A1977295261DFE9400C40582 /* Localizable.strings */,
-			);
-			path = Localization;
-			sourceTree = "<group>";
-		};
 		A1977297261DFFB500C40582 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				A1977297261DFFB500C40582 /* Extension */,
-				A1977287261DFC5500C40582 /* Localization */,
 				A1F3B522261B615600031A22 /* Data */,
 				A1F3B523261B615A00031A22 /* Domain */,
 				A1F3B502261B602A00031A22 /* Profile.h */,
@@ -220,7 +208,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1977293261DFE9400C40582 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,18 +253,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		A1977295261DFE9400C40582 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A1977294261DFE9400C40582 /* id */,
-				A1977296261DFE9A00C40582 /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A1F3B505261B602A00031A22 /* Debug */ = {

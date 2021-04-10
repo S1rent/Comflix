@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  Common
+
+  Created by IT Division on 10/04/21.
+  
+*/
+"movie_detail" = "Movie Detail";
+"overview" = "Overview";
+"release_date" = "Release Date";
+"favorite" = "Favorite";
+"nodata" = "No Data.";
+"remove_from_favorite" = "Remove from favorite";
+"success_remove_from_favorite" = "Successfully remove from favorite";
+"add_to_favorite" = "Add to favorite";
+"success_add_to_favorite" = "Successfully add to favorite";
+"information" = "Information";
+"favorite_movie_genre" = "Favorite Movie Genre";
+"action" = "Action";
+"adventure" = "Adventure";
+"anime" = "Anime";
+"cartoon" = "Cartoon";
+"comedy" = "Comedy";
+"fantasy" = "Fantasy";
+"scifi" = "Sci-Fi";
+"profile" = "Profile";
+"random_movie" = "Random Movie";
+"label_random_movie" = "Don't know what to watch ? we'll pick for you";
+"home" = "Home";
+"label_greet" = "Hi there, what are you watching today ?";
+"available_now" = "Available Now";
